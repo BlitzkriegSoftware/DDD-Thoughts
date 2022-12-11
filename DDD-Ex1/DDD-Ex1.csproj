@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="SharedKernels\" />
+    <Folder Include="Inventory\" />
   </ItemGroup>
 
 </Project>

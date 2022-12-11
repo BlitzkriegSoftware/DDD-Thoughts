@@ -35,10 +35,9 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// </summary>
         public UniversalProductCode(string upc)
         {
-            (this.ProductType, this.CompanyCode, this.InventoryId) = UpcParse(upc);
-            _ = this.CheckSum;
+            (this.ProductType, this.CompanyCode, this.InventoryId, this.CheckSum) = UpcParse(upc);
+            CheckSumUpdate();
         }
-
 
         #endregion
 
@@ -79,23 +78,18 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// </summary>
         public int InventoryId { get; set; } = 0;
 
-        private int _checksum = 0;
-
         /// <summary>
         /// Checksum
         /// <para><![CDATA[https://en.wikipedia.org/wiki/Check_digit#UPC]]></para>
         /// </summary>
-        public int CheckSum
+        public int CheckSum { get; set; }
+
+        /// <summary>
+        /// CheckSum Update on this Instance
+        /// </summary>
+        public void CheckSumUpdate()
         {
-            get
-            {
-                _checksum = CheckSumCompute(this.ToStringNoSpacesNoCheckSum());
-                return _checksum;
-            }
-            set
-            {
-                _checksum = value;
-            }
+            this.CheckSum = CheckSumCompute(this.ToStringNoSpacesNoCheckSum());
         }
 
         /// <summary>
@@ -109,7 +103,6 @@ namespace StuartWilliams.CandyCo.SharedKernels
             if (string.IsNullOrWhiteSpace(upc)) isOk = false;
             if (upc.Length != 12) isOk = false;
             if (!DigitsOnly.IsMatch(upc)) isOk = false;
-
             return isOk;
         }
 
@@ -122,25 +115,16 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// </summary>
         /// <param name="upc">UPC</param>
         /// <returns>Tuple: ProductType, CompanyCode, InventoryId</returns>
-        public static (int, int, int) UpcParse(string upc)
+        public static (int, int, int, int) UpcParse(string upc)
         {
             upc ??= string.Empty;
             upc = upc.Replace(" ", "");
             upc = upc.PadLeft(12, '0');
-            var productType = Convert.ToInt32(upc.Substring(0, 1));
+            var productType = Convert.ToInt32(upc[..1]);
             var companyCode = Convert.ToInt32(upc.Substring(1, 5));
             var inventoryId = Convert.ToInt32(upc.Substring(6, 5));
-            return (productType, companyCode, inventoryId);
-        }
-
-        /// <summary>
-        /// Compute Checksum from int
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public static int CheckSumCompute(int value)
-        {
-            return CheckSumCompute(value.ToString().PadLeft(12, '0'));
+            var checkSum = Convert.ToInt32(upc.Substring(11, 1));
+            return (productType, companyCode, inventoryId, checkSum);
         }
 
         /// <summary>
@@ -152,7 +136,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// </para>
         /// <para>
         /// Add the digits (up to but not including the check digit)
-        /// in the even-numbered positions (second, fourth, sixth, etc.) to the result.</para>
+        /// in the even-numbered positions (second, fourth, sixth, etc.) to the result.
         /// </para>
         /// <para>
         /// Take the remainder of the result divided by 10 (ie. the modulo 10 operation).
@@ -179,28 +163,28 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// Add the two results together: 0 + 5 = 5.
         /// To calculate the check digit, take the remainder of (5 / 10), which is also known as (5 modulo 10), and if not 0, subtract from 10: i.e. (5 / 10) = 0 remainder 5; (10 - 5) = 5. Therefore, the check digit x value is 5.
         /// </example>
-        /// <param name="value">Value to compute for</param>
+        /// <param name="upcText">Value to compute for</param>
         /// <returns>Checksum</returns>
         public static int CheckSumCompute(string upcText)
         {
-            var checkSum = 0;
-
             string upcNoCC = upcText;
 
             int odd = 0;
-            for (int i = 0; i <= upcNoCC.Length; i = i + 2)
+            for (int i = 0; i < upcNoCC.Length; i += 2)
             {
-                odd += Convert.ToInt32(upcNoCC[i]);
+                var digit = upcNoCC.Substring(i,1);
+                odd += Convert.ToInt32(digit);
             }
 
             int even = 0;
-            for (int i = 1; i <= upcNoCC.Length; i = i + 2)
+            for (int i = 1; i < upcNoCC.Length; i += 2)
             {
-                even += Convert.ToInt32(upcNoCC[i]);
+                var digit = upcNoCC.Substring(i, 1);
+                even += Convert.ToInt32(digit);
             }
 
-            checkSum = (odd * 3) + even;
-            checkSum = checkSum % 10;
+            int checkSum = odd * 3 + even;
+            checkSum %= 10;
             if (checkSum != 0)
             {
                 checkSum = 10 - checkSum;
@@ -220,10 +204,8 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns>true if equals</returns>
         public override bool Equals(object? obj)
         {
-            UniversalProductCode? that = obj as UniversalProductCode;
-
-            bool result = base.Equals(obj);
-            if (that == null)
+            bool result;
+            if (obj is not UniversalProductCode that)
             {
                 result = false;
             }
@@ -245,8 +227,8 @@ namespace StuartWilliams.CandyCo.SharedKernels
         public override int GetHashCode()
         {
             return this.ProductType.GetHashCode() ^
-                    this.CompanyCode.GetHashCode() ^
-                    this.InventoryId.GetHashCode();
+                   this.CompanyCode.GetHashCode() ^
+                   this.InventoryId.GetHashCode();
         }
 
         /// <summary>
@@ -255,7 +237,12 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns></returns>
         public override string ToString()
         {
-            return $"{this.ProductType.ToString().PadLeft(1, '0')} {this.CompanyCode.ToString().PadLeft(5, '0')} {this.InventoryId.ToString().PadLeft(5, '0')} {this.CheckSum.ToString().PadLeft(1, '0')}";
+            var pt = this.ProductType.ToString().PadLeft(1, '0');
+            var cc = this.CompanyCode.ToString().PadLeft(5, '0');
+            var ii = this.InventoryId.ToString().PadLeft(5, '0');
+            var cs = this.CheckSum.ToString().PadLeft(1, '0');
+
+            return $"{pt} {cc} {ii} {cs}";
         }
 
         /// <summary>
@@ -264,9 +251,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns></returns>
         public string ToStringNoSpace()
         {
-            return this.ProductType.ToString().PadLeft(1, '0').Substring(0, 1) +
-                         this.CompanyCode.ToString().PadLeft(5, '0').Substring(0, 5) +
-                         this.InventoryId.ToString().PadLeft(5, '0').Substring(0, 5);
+            return this.ToString().Replace(" ", "");
         }
 
         /// <summary>
@@ -275,8 +260,8 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns>(sic)</returns>
         public string ToStringNoSpacesNoCheckSum()
         {
-            var upc = this.ToStringNoSpace()
-                return upc.Substring(0, upc.Length - 1);
+            var upc = this.ToStringNoSpace();
+            return upc[..^1];
         }
         #endregion
 

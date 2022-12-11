@@ -10,14 +10,14 @@ namespace StuartWilliams.CandyCo.SharedKernels
 {
 
     /// <summary>
-    /// UniversalProductCode (UPC-A)
+    /// UniversalProductCode (UPC-A) 12 Digits
     /// <para>Identifier for a Product</para>
     /// <list type="bullet">
     /// <listheader>Sections (total of 4, space separated)</listheader>
     /// <item>Product Type (1) 0</item>
-    /// <item>Company Code (5) 1..5</item>
-    /// <item>Inventory Id (5) 6..11</item>
-    /// <item>Check Digit (1) 12</item>
+    /// <item>Company Code (5) 1..{5}</item>
+    /// <item>Inventory Id (5) 6..{5}</item>
+    /// <item>Check Digit  (1) 11..</item>
     /// </list>
     /// <para><![CDATA[https://www.gtin.info/barcode-101/]]></para>
     /// </summary>

@@ -124,6 +124,9 @@
              Add the two results together: 0 + 5 = 5.
              To calculate the check digit, take the remainder of (5 / 10), which is also known as (5 modulo 10), and if not 0, subtract from 10: i.e. (5 / 10) = 0 remainder 5; (10 - 5) = 5. Therefore, the check digit x value is 5.
              </example>
+             <remarks>
+             <![CDATA[https://www.gs1.org/services/check-digit-calculator#]]>
+             </remarks>
              <param name="upcText">Value to compute for</param>
              <returns>Checksum</returns>
         </member>

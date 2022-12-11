@@ -99,6 +99,20 @@ namespace StuartWilliams.CandyCo.SharedKernels
         public bool IsValid()
         {
             bool isOk = true;
+
+            if (this.ProductType < 0) isOk = false;
+            if (this.ProductType > 9) isOk = false;
+
+            if (this.CompanyCode <= 0) isOk = false;
+            if (this.CompanyCode > 99999) isOk = false;
+
+            if (this.InventoryId <= 0) isOk = false;
+            if (this.InventoryId > 99999) isOk = false;
+
+            if (this.CheckSum < 0) isOk = false;
+            if (this.CheckSum > 9) isOk = false;
+            if(this.CheckSum != CheckSumCompute(this.ToStringNoSpacesNoCheckSum())) isOk = false;
+
             var upc = this.ToStringNoSpace();
             if (string.IsNullOrWhiteSpace(upc)) isOk = false;
             if (upc.Length != 12) isOk = false;
@@ -163,6 +177,9 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// Add the two results together: 0 + 5 = 5.
         /// To calculate the check digit, take the remainder of (5 / 10), which is also known as (5 modulo 10), and if not 0, subtract from 10: i.e. (5 / 10) = 0 remainder 5; (10 - 5) = 5. Therefore, the check digit x value is 5.
         /// </example>
+        /// <remarks>
+        /// <![CDATA[https://www.gs1.org/services/check-digit-calculator#]]>
+        /// </remarks>
         /// <param name="upcText">Value to compute for</param>
         /// <returns>Checksum</returns>
         public static int CheckSumCompute(string upcText)
@@ -172,7 +189,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
             int odd = 0;
             for (int i = 0; i < upcNoCC.Length; i += 2)
             {
-                var digit = upcNoCC.Substring(i,1);
+                var digit = upcNoCC.Substring(i, 1);
                 odd += Convert.ToInt32(digit);
             }
 

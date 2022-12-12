@@ -4,6 +4,31 @@
         <name>StuartWilliams.CandyCo</name>
     </assembly>
     <members>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind">
+            <summary>
+            Kind: Company
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind.Vendor">
+            <summary>
+            Vendor
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind.Customer">
+            <summary>
+            Customers
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind.Other">
+            <summary>
+            Other
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType">
             <summary>
             Container Type
@@ -164,6 +189,41 @@
             Comes in a container of N
             </summary>
         </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind">
+            <summary>
+            Kind: of Person
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind.Primary">
+            <summary>
+            Primary
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind.Sales">
+            <summary>
+            Sales
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind.Receiving">
+            <summary>
+            Receiving
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind.Carrier">
+            <summary>
+            Carrier
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind.Other">
+            <summary>
+            Other
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind">
             <summary>
             Kind: Promotion
@@ -187,6 +247,36 @@
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind.VolumeDiscount">
             <summary>
             Volume Discount
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany">
+            <summary>
+            Interface: Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.Kind">
+            <summary>
+            Kind: Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.People">
+            <summary>
+            People
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem">
@@ -296,6 +386,11 @@
             PK
             </summary>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Kind">
+            <summary>
+            Kind: Person
+            </summary>
+        </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.NameLast">
             <summary>
             Name: Last
@@ -321,7 +416,7 @@
             Phone: Other
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Location">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Address">
             <summary>
             Address
             </summary>
@@ -334,6 +429,36 @@
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList.Iso4217">
             <summary>
             List of Codes
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Company">
+            <summary>
+            Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.Kind">
+            <summary>
+            Kind: Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.Address">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.People">
+            <summary>
+            People
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo">
@@ -534,6 +659,51 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Money.CurrencyInfo">
             <summary>
             CurrencyInfo
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Person">
+            <summary>
+            Person
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.Kind">
+            <summary>
+            Kind: Person
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.NameLast">
+            <summary>
+            Name: Last
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.NameFirst">
+            <summary>
+            Name: First
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.Email">
+            <summary>
+            Email
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.MobilePhone">
+            <summary>
+            Phone: Mobile
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.OtherPhone">
+            <summary>
+            Phone: Other
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.Address">
+            <summary>
+            Address
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode">

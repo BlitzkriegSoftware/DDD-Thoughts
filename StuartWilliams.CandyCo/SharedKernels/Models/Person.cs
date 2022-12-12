@@ -1,14 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 using StuartWilliams.CandyCo.SharedKernels.Enums;
-using StuartWilliams.CandyCo.SharedKernels.Models;
+using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 
-namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
+namespace StuartWilliams.CandyCo.SharedKernels.Models
 {
     /// <summary>
-    /// Interface: Person
+    /// Person
     /// </summary>
-    public interface IPerson
+    public class Person : IPerson
     {
         /// <summary>
         /// PK
@@ -31,21 +35,18 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         public string NameFirst { get; set; }
 
         /// <summary>
-        /// E-Mail
+        /// Email
         /// </summary>
-        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         /// <summary>
         /// Phone: Mobile
         /// </summary>
-        [DataType(DataType.PhoneNumber)]
         public string MobilePhone { get; set; }
 
         /// <summary>
         /// Phone: Other
         /// </summary>
-        [DataType(DataType.PhoneNumber)]
         public string OtherPhone { get; set; }
 
         /// <summary>

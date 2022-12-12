@@ -10,8 +10,4 @@
     <DocumentationFile>.\StuartWilliams.CandyCo.xml</DocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Inventory\" />
-  </ItemGroup>
-
 </Project>

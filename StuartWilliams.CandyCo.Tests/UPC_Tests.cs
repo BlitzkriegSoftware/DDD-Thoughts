@@ -2,8 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
-
-using StuartWilliams.CandyCo.SharedKernels;
+using StuartWilliams.CandyCo.SharedKernels.Models;
 
 namespace DDD_thoughts_test_example
 {

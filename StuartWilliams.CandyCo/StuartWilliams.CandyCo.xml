@@ -1,0 +1,697 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StuartWilliams.CandyCo</name>
+    </assembly>
+    <members>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType">
+            <summary>
+            Container Type
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Each">
+            <summary>
+            Each
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Box">
+            <summary>
+            Box
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Pallet">
+            <summary>
+            Pallet
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Drum">
+            <summary>
+            Drum
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Bag">
+            <summary>
+            Bag
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind">
+            <summary>
+            Inventory Change Operation Kind
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.Unknown">
+            <summary>
+            This will result in an Error
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.InboundAdd">
+            <summary>
+            Inventory Inbound (Receiving from Vendor)
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.OutboundMinus">
+            <summary>
+            Outbound Minus (Shipping to Customer)
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.InventoryLossMissing">
+            <summary>
+            Inventory Loss Missing
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.InventoryLossDamaged">
+            <summary>
+            Inventory Loss Damaged
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.InventoryTransfer">
+            <summary>
+            Inventory Transfer
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.InventoryReturnFromCustomer">
+            <summary>
+            Inventory Return From Customer
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.InventoryReturnToVendor">
+            <summary>
+            Inventory Return To Vendor
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind">
+            <summary>
+            Location Kind
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind.Commercial">
+            <summary>
+            Commercial
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind.Residential">
+            <summary>
+            Residential
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind.Land">
+            <summary>
+            Any place w/o active buidings e.g., empty-land, abandoned-property, etc.
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind">
+            <summary>
+            Kind: Logistics Center
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind.CompanyOwned">
+            <summary>
+            Owned by Company
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind.CompanyOperated">
+            <summary>
+            Operated By, but not Owned by Company
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind.Shipper">
+            <summary>
+            Shipper (LC at UPS, FedEx, etc.)
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind.Vendor">
+            <summary>
+            Vendor Direct aka Drop-Ship
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind.ThirdParty">
+            <summary>
+            Any Third Party not in above
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind">
+            <summary>
+            Packaging Unit Kind
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind.Each">
+            <summary>
+            One each
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind.ContainerOfN">
+            <summary>
+            Comes in a container of N
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind">
+            <summary>
+            Kind: Promotion
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind.PercentOff">
+            <summary>
+            A Percentage Off
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind.SalePrice">
+            <summary>
+            Sale Price
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind.VolumeDiscount">
+            <summary>
+            Volume Discount
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem">
+            <summary>
+            Interface: Inventory Item
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.Upc">
+            <summary>
+            UPC
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.VendorId">
+            <summary>
+            Vendor
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.VendorInventoryCode">
+            <summary>
+            Vendors Inventory Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.LastUpdated">
+            <summary>
+            Last Updated
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.IsValid">
+            <summary>
+            Is Valid
+            </summary>
+            <returns>True if so</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory">
+            <summary>
+            Interface: Inventory Item History
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.Item">
+            <summary>
+            Inventory Item
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.ChangeOperationKind">
+            <summary>
+            Inventory Change Operation
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.Quantity">
+            <summary>
+            Quantity
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.UnitKind">
+            <summary>
+            Unit Kind
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.Cost">
+            <summary>
+            Cost
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.TransactionDate">
+            <summary>
+            Transaction Date
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory.TransactionUser">
+            <summary>
+            Transaction User
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IMoney">
+            <summary>
+            Interface: Money
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IMoney.Amount">
+            <summary>
+            Amount
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IMoney.CurrencyInfo">
+            <summary>
+            Currency Code
+            <para>ISO 4217 (<![CDATA[https://en.wikipedia.org/wiki/ISO_4217]]>)</para>
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson">
+            <summary>
+            Interface: Person
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.NameLast">
+            <summary>
+            Name: Last
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.NameFirst">
+            <summary>
+            Name: First
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Email">
+            <summary>
+            E-Mail
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.MobilePhone">
+            <summary>
+            Phone: Mobile
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.OtherPhone">
+            <summary>
+            Phone: Other
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Location">
+            <summary>
+            Address
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList">
+            <summary>
+            List: ISO 4217 Curency Code
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList.Iso4217">
+            <summary>
+            List of Codes
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo">
+            <summary>
+            Currency Info (ISO 4217)
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.#ctor">
+            <summary>
+            CTOR
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.#ctor(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            CTOR
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.#ctor(System.String)">
+            <summary>
+            CTOR
+            </summary>
+            <param name="currencyCode">ISO 4217 Currency Code (text)</param>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.IsoCurrencyCodeText">
+            <summary>
+            ISO Currency Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.IsoCurrencyCodeDigits">
+            <summary>
+            ISO Currency Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.PlacesAfterDecimal">
+            <summary>
+            Places After Decimal
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.Description">
+            <summary>
+            Description
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.IsoCurrencyCodeTextIsInList">
+            <summary>
+            Is the current text code in ISO 4217 list?
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.IsValid">
+            <summary>
+            Is Valid?
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.Equals(System.Object)">
+            <summary>
+            Equals
+            </summary>
+            <param name="obj">thing to compare</param>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.GetHashCode">
+            <summary>
+            Get Hash Code
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.ToString">
+            <summary>
+            Debug String
+            </summary>
+            <returns>(sic)</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.GpsCoordinates">
+            <summary>
+            Gps Coordinates
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.GpsCoordinates.Latitude">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.GpsCoordinates.Longitude">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.GpsCoordinates.Elevation">
+            <summary>
+            Elevation
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.GpsCoordinates.Confidence">
+            <summary>
+            Confidence as a Percent
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.GpsCoordinates.IsValid">
+            <summary>
+            Is Valid GeoCode
+            </summary>
+            <returns>True if so</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Location">
+            <summary>
+            Model: Location
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.LocationName">
+            <summary>
+            Location Name
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.Kind">
+            <summary>
+            Location Kind
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.Addreesee">
+            <summary>
+            Who / What is Receiving
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.AddressLine1">
+            <summary>
+            Primary Address Line
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.AddressLine2">
+            <summary>
+            Address Line 2
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.AddressLine3">
+            <summary>
+            Address Line 3
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.AddressLine4">
+            <summary>
+            Address Line 4
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.StateOrProvince">
+            <summary>
+            State Or Province
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.PostalCode">
+            <summary>
+            Postal Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.Coordinates">
+            <summary>
+            GPS Coordinates
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Location.IsValidMailingAddress">
+            <summary>
+            Mailing Address: Is Valid
+            </summary>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Location.IsGeoCoded">
+            <summary>
+            GeoCoded: Is Coded
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Location.IsLocationRecord">
+            <summary>
+            Is this a valid DB location record
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Money">
+            <summary>
+            Money
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Money.Amount">
+            <summary>
+            Amount
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Money.CurrencyInfo">
+            <summary>
+            CurrencyInfo
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode">
+            <summary>
+            UniversalProductCode (UPC-A) 12 Digits
+            <para>Identifier for a Product</para>
+            <list type="bullet">
+            <listheader>Sections (total of 4, space separated)</listheader>
+            <item>Product Type (1) 0</item>
+            <item>Company Code (5) 1..{5}</item>
+            <item>Inventory Id (5) 6..{5}</item>
+            <item>Check Digit  (1) 11..</item>
+            </list>
+            <para><![CDATA[https://www.gtin.info/barcode-101/]]></para>
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.#ctor">
+            <summary>
+            CTOR
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.#ctor(System.String)">
+            <summary>
+            CTOR
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.DigitsOnly">
+            <summary>
+            RegEx: Digits Only
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.CandyCoId">
+            <summary>
+            The company Id of Candy Co.
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.UpcKind">
+            <summary>
+            Style of Encoding
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.ProductTypeDefault">
+            <summary>
+            0: General Merchandise
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.ProductType">
+            <summary>
+            Leftmost single digit indicating product type
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.CompanyCode">
+            <summary>
+            Company Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.InventoryId">
+            <summary>
+            Inventory Id for the company code up to 5 digits
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.CheckSum">
+            <summary>
+            Checksum
+            <para><![CDATA[https://en.wikipedia.org/wiki/Check_digit#UPC]]></para>
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.CheckSumUpdate">
+            <summary>
+            CheckSum Update on this Instance
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.IsValid">
+            <summary>
+            Is this a valid UPC
+            </summary>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.UpcParse(System.String)">
+            <summary>
+            Parse a UPC string
+            </summary>
+            <param name="upc">UPC</param>
+            <returns>Tuple: ProductType, CompanyCode, InventoryId</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.CheckSumCompute(System.String)">
+             <summary>
+             The final digit of a Universal Product Code is a check digit computed as follows:[3]
+             </summary>
+             <para>
+             Add the digits in the odd-numbered positions from the right (first, third, fifth, etc.) 
+                not including the check digit) together and multiply by three.
+             </para>
+             <para>
+             Add the digits (up to but not including the check digit)
+             in the even-numbered positions (second, fourth, sixth, etc.) to the result.
+             </para>
+             <para>
+             Take the remainder of the result divided by 10 (ie. the modulo 10 operation).
+                  If the remainder is equal to 0 then use 0 as the check digit, and
+             </para>
+             <para>
+             if not 0 subtract the remainder from 10 to derive the check digit.
+            </para>
+            <example>
+             For instance, the UPC-A barcode for a box of tissues is "036000241457".
+              The last digit is the check digit "7", and if the other numbers are correct
+                then the check digit calculation must produce 7.
+              Add the odd number digits: 0+6+0+2+1+5 = 14.
+                Multiply the result by 3: 14 × 3 = 42.
+             Add the even number digits: 3+0+0+4+4 = 11.
+             Add the two results together: 42 + 11 = 53.
+             To calculate the check digit, take the remainder of (53 / 10), which is also known as (53 modulo 10), and if not 0, subtract from 10. Therefore, the check digit value is 7. i.e. (53 / 10) = 5 remainder 3; 10 - 3 = 7.
+             </example>
+             <example>
+             To calculate the check digit for the following food item "01010101010x".
+             Add the odd number digits: 0+0+0+0+0+0 = 0.
+                  Multiply the result by 3: 0 x 3 = 0.
+             Add the even number digits: 1+1+1+1+1=5.
+             Add the two results together: 0 + 5 = 5.
+             To calculate the check digit, take the remainder of (5 / 10), which is also known as (5 modulo 10), and if not 0, subtract from 10: i.e. (5 / 10) = 0 remainder 5; (10 - 5) = 5. Therefore, the check digit x value is 5.
+             </example>
+             <remarks>
+             <![CDATA[https://www.gs1.org/services/check-digit-calculator#]]>
+             </remarks>
+             <param name="upcText">Value to compute for</param>
+             <returns>Checksum</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.Equals(System.Object)">
+            <summary>
+            Compare two UPCs
+            </summary>
+            <param name="obj">thing to compare to</param>
+            <returns>true if equals</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.GetHashCode">
+            <summary>
+            Get HashCode
+            </summary>
+            <returns>HashCode</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.ToString">
+            <summary>
+            Put the UPC in the correct format P_COMPA_INVEN_C
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.ToStringNoSpace">
+            <summary>
+            Put the UPC in the correct format with NO Spaces
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.ToStringNoSpacesNoCheckSum">
+            <summary>
+            To String w/o spaces or checksum
+            </summary>
+            <returns>(sic)</returns>
+        </member>
+    </members>
+</doc>

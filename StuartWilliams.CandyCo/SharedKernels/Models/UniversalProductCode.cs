@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
-namespace StuartWilliams.CandyCo.SharedKernels
+namespace StuartWilliams.CandyCo.SharedKernels.Models
 {
 
     /// <summary>
@@ -35,7 +30,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// </summary>
         public UniversalProductCode(string upc)
         {
-            (this.ProductType, this.CompanyCode, this.InventoryId, this.CheckSum) = UpcParse(upc);
+            (ProductType, CompanyCode, InventoryId, CheckSum) = UpcParse(upc);
             CheckSumUpdate();
         }
 
@@ -89,7 +84,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// </summary>
         public void CheckSumUpdate()
         {
-            this.CheckSum = CheckSumCompute(this.ToStringNoSpacesNoCheckSum());
+            CheckSum = CheckSumCompute(ToStringNoSpacesNoCheckSum());
         }
 
         /// <summary>
@@ -100,20 +95,20 @@ namespace StuartWilliams.CandyCo.SharedKernels
         {
             bool isOk = true;
 
-            if (this.ProductType < 0) isOk = false;
-            if (this.ProductType > 9) isOk = false;
+            if (ProductType < 0) isOk = false;
+            if (ProductType > 9) isOk = false;
 
-            if (this.CompanyCode <= 0) isOk = false;
-            if (this.CompanyCode > 99999) isOk = false;
+            if (CompanyCode <= 0) isOk = false;
+            if (CompanyCode > 99999) isOk = false;
 
-            if (this.InventoryId <= 0) isOk = false;
-            if (this.InventoryId > 99999) isOk = false;
+            if (InventoryId <= 0) isOk = false;
+            if (InventoryId > 99999) isOk = false;
 
-            if (this.CheckSum < 0) isOk = false;
-            if (this.CheckSum > 9) isOk = false;
-            if(this.CheckSum != CheckSumCompute(this.ToStringNoSpacesNoCheckSum())) isOk = false;
+            if (CheckSum < 0) isOk = false;
+            if (CheckSum > 9) isOk = false;
+            if (CheckSum != CheckSumCompute(ToStringNoSpacesNoCheckSum())) isOk = false;
 
-            var upc = this.ToStringNoSpace();
+            var upc = ToStringNoSpace();
             if (string.IsNullOrWhiteSpace(upc)) isOk = false;
             if (upc.Length != 12) isOk = false;
             if (!DigitsOnly.IsMatch(upc)) isOk = false;
@@ -219,7 +214,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// </summary>
         /// <param name="obj">thing to compare to</param>
         /// <returns>true if equals</returns>
-        public override bool Equals(object? obj)
+        public override bool Equals(object obj)
         {
             bool result;
             if (obj is not UniversalProductCode that)
@@ -228,10 +223,10 @@ namespace StuartWilliams.CandyCo.SharedKernels
             }
             else
             {
-                result = (this.ProductType == that?.ProductType) &&
-                         (this.CompanyCode == that?.CompanyCode) &&
-                         (this.InventoryId == that?.InventoryId) &&
-                         (this.CheckSum == that?.CheckSum);
+                result = ProductType == that?.ProductType &&
+                         CompanyCode == that?.CompanyCode &&
+                         InventoryId == that?.InventoryId &&
+                         CheckSum == that?.CheckSum;
 
             }
             return result;
@@ -243,9 +238,9 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns>HashCode</returns>
         public override int GetHashCode()
         {
-            return this.ProductType.GetHashCode() ^
-                   this.CompanyCode.GetHashCode() ^
-                   this.InventoryId.GetHashCode();
+            return ProductType.GetHashCode() ^
+                   CompanyCode.GetHashCode() ^
+                   InventoryId.GetHashCode();
         }
 
         /// <summary>
@@ -254,10 +249,10 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns></returns>
         public override string ToString()
         {
-            var pt = this.ProductType.ToString().PadLeft(1, '0');
-            var cc = this.CompanyCode.ToString().PadLeft(5, '0');
-            var ii = this.InventoryId.ToString().PadLeft(5, '0');
-            var cs = this.CheckSum.ToString().PadLeft(1, '0');
+            var pt = ProductType.ToString().PadLeft(1, '0');
+            var cc = CompanyCode.ToString().PadLeft(5, '0');
+            var ii = InventoryId.ToString().PadLeft(5, '0');
+            var cs = CheckSum.ToString().PadLeft(1, '0');
 
             return $"{pt} {cc} {ii} {cs}";
         }
@@ -268,7 +263,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns></returns>
         public string ToStringNoSpace()
         {
-            return this.ToString().Replace(" ", "");
+            return ToString().Replace(" ", "");
         }
 
         /// <summary>
@@ -277,7 +272,7 @@ namespace StuartWilliams.CandyCo.SharedKernels
         /// <returns>(sic)</returns>
         public string ToStringNoSpacesNoCheckSum()
         {
-            var upc = this.ToStringNoSpace();
+            var upc = ToStringNoSpace();
             return upc[..^1];
         }
         #endregion

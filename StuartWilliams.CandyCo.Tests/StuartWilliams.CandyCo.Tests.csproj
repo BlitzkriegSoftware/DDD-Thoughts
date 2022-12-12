@@ -19,4 +19,8 @@
 		<ProjectReference Include="..\StuartWilliams.CandyCo\StuartWilliams.CandyCo.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Libs\" />
+	</ItemGroup>
+
 </Project>

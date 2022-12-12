@@ -71,6 +71,8 @@ namespace DDD_thoughts_test_example
                 }
             };
 
+            // TODO: Test Serialization
+            
         }
     }
 }

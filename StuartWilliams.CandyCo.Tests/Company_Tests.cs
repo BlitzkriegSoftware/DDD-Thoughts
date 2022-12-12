@@ -1,13 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using StuartWilliams.CandyCo.SharedKernels.Models;
 using StuartWilliams.CandyCo.SharedKernels.Enums;
+
+using BlitzkriegSoftware.MsTest;
 
 namespace DDD_thoughts_test_example
 {
@@ -26,7 +24,7 @@ namespace DDD_thoughts_test_example
         #endregion
 
         [TestMethod]
-        public void Company_Ctor()
+        public void Company_Serialization()
         {
             Company model = new()
             {
@@ -70,9 +68,7 @@ namespace DDD_thoughts_test_example
                     }
                 }
             };
-
-            // TODO: Test Serialization
-            
+            TestJsonSerializationHelper.AssertJsonSerialization<Company>(_testContext, model);
         }
     }
 }

@@ -1,12 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StuartWilliams.CandyCo.SharedKernels.Lookups;
 using StuartWilliams.CandyCo.SharedKernels.Models;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DDD_thoughts_test_example
 {
@@ -65,7 +60,13 @@ namespace DDD_thoughts_test_example
             var actual = ci.GetHashCode();
             var expected = 2;
             Assert.AreEqual(actual, expected);
+        }
 
+        [TestMethod]
+        public void CurrencyInfo_CTOR() {
+            var ci = new CurrencyInfo();
+            _testContext?.WriteLine(ci.ToString());
+            Assert.IsTrue(ci.IsValid());
         }
 
     }

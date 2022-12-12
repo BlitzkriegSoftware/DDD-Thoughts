@@ -1,12 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics.CodeAnalysis;
-
-using StuartWilliams.CandyCo.SharedKernels;
 using StuartWilliams.CandyCo.SharedKernels.Models;
 using StuartWilliams.CandyCo.SharedKernels.Enums;
 

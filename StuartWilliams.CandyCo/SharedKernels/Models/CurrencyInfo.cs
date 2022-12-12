@@ -15,7 +15,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// <summary>
         /// CTOR
         /// </summary>
-        public CurrencyInfo() { }
+        public CurrencyInfo(): this("USD") { }
 
         /// <summary>
         /// CTOR

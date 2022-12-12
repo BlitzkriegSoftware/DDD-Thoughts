@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics.CodeAnalysis;
 
 using StuartWilliams.CandyCo.SharedKernels;
-using System.Diagnostics.CodeAnalysis;
+using StuartWilliams.CandyCo.SharedKernels.Models;
+using StuartWilliams.CandyCo.SharedKernels.Enums;
 
 namespace DDD_thoughts_test_example
 {
@@ -58,7 +60,7 @@ namespace DDD_thoughts_test_example
         [TestMethod]
         public void Location_Invalid_1()
         {
-            var model = new StuartWilliams.CandyCo.SharedKernels.Models.Location()
+            var model = new Location()
             {
                 Id = 1,
                 LocationName = "A Place",
@@ -70,7 +72,7 @@ namespace DDD_thoughts_test_example
                 City = "Sacramento",
                 StateOrProvince = "CA",
                 PostalCode = "95620",
-                Kind = StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind.Commercial
+                Kind = LocationKind.Commercial
             };
 
             Assert.IsFalse(model.IsGeoCoded());

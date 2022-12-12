@@ -37,7 +37,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// <summary>
         /// People
         /// </summary>
-        public List<Interfaces.IPerson> People { get; set; }
+        public List<Models.Person> People { get; set; }
 
     }
 }

@@ -32,6 +32,6 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         /// <summary>
         /// People
         /// </summary>
-        List<IPerson> People { get; set; }
+        List<Person> People { get; set; }
     }
 }

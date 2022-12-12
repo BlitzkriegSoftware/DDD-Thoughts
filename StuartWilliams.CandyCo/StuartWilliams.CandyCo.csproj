@@ -1,13 +1,51 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <LangVersion>9.0</LangVersion>
-    <RootNamespace>StuartWilliams.CandyCo</RootNamespace>
-    <ImplicitUsings>disable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>.\StuartWilliams.CandyCo.xml</DocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<RootNamespace>StuartWilliams.CandyCo</RootNamespace>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>.\StuartWilliams.CandyCo.xml</DocumentationFile>
+		<InformationalVersion>6.0.0</InformationalVersion>
+		<Description>This is a DDD example</Description>
+		<Copyright>(c) 2022 Stuart Williams</Copyright>
+		<Authors>Stuart Williams</Authors>
+		<ApplicationIcon>BlitzkriegSoftware.ico</ApplicationIcon>
+		<Title>DDD Example</Title>
+		<PackageIcon>blizkrieglogo300.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/blitzkriegsoftware/ddd-thoughts</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/blitzkriegsoftware/ddd-thoughts</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>ddd;candy co;examples</PackageTags>
+		<PackageReleaseNotes>6.0.0 - Initial Models</PackageReleaseNotes>
+		<AssemblyVersion>6.0.0.0</AssemblyVersion>
+		<FileVersion>6.0.0.0</FileVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <WarningLevel>5</WarningLevel>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <WarningLevel>5</WarningLevel>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="BlitzkriegSoftware.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\blizkrieglogo300.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 </Project>

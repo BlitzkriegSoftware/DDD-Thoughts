@@ -15,21 +15,23 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// <summary>
         /// CTOR
         /// </summary>
-        public CurrencyInfo(): this("USD") { }
+        public CurrencyInfo() : this("USD") { }
 
         /// <summary>
         /// CTOR
         /// </summary>
         public CurrencyInfo(
-            string isoCurrencyCodeText, 
+            string isoCurrencyCodeText,
             string isoCurrencyCodeDigits,
             int placesAfterDecimal,
-            string description
-        ) { 
+            string description,
+            string locale
+        ) {
             this.IsoCurrencyCodeText = isoCurrencyCodeText;
             this.IsoCurrencyCodeDigits = isoCurrencyCodeDigits;
-            this.PlacesAfterDecimal= placesAfterDecimal;
+            this.PlacesAfterDecimal = placesAfterDecimal;
             this.Description = description;
+            this.Locale = locale;
         }
 
         /// <summary>
@@ -39,11 +41,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         public CurrencyInfo(string currencyCode)
         {
             CurrencyInfo model = null;
-            if(CurencyCodeList.Iso4217.ContainsKey(currencyCode)) model = CurencyCodeList.Iso4217[currencyCode];
-            if(model is not null)
+            if (CurencyCodeList.Iso4217.ContainsKey(currencyCode)) model = CurencyCodeList.Iso4217[currencyCode];
+            if (model is not null)
             {
                 this.IsoCurrencyCodeText = model.IsoCurrencyCodeText;
-                this.IsoCurrencyCodeDigits= model.IsoCurrencyCodeDigits;
+                this.IsoCurrencyCodeDigits = model.IsoCurrencyCodeDigits;
                 this.Description = model.Description;
                 this.PlacesAfterDecimal = model.PlacesAfterDecimal;
             }
@@ -52,7 +54,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// <summary>
         /// ISO Currency Code
         /// </summary>
-        [StringLength(maximumLength: 3, MinimumLength =1)]
+        [StringLength(maximumLength: 3, MinimumLength = 1)]
         public string IsoCurrencyCodeText { get; set; }
 
         /// <summary>
@@ -71,6 +73,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// Description
         /// </summary>
         public string Description { get; set; }
+
+        /// <summary>
+        /// Locale
+        /// </summary>
+        public string Locale { get; set; }
 
         /// <summary>
         /// Is the current text code in ISO 4217 list?

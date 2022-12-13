@@ -1,7 +1,11 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
+
 using StuartWilliams.CandyCo.SharedKernels.Lookups;
 using StuartWilliams.CandyCo.SharedKernels.Models;
-using System.Diagnostics.CodeAnalysis;
+using StuartWilliams.CandyCo.SharedKernels.Enums;
 
 namespace DDD_thoughts_test_example
 {
@@ -68,6 +72,7 @@ namespace DDD_thoughts_test_example
             _testContext?.WriteLine(ci.ToString());
             Assert.IsTrue(ci.IsValid());
         }
+
 
     }
 }

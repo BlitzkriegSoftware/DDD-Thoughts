@@ -471,7 +471,7 @@
             CTOR
             </summary>
         </member>
-        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.#ctor(System.String,System.String,System.Int32,System.String)">
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.#ctor(System.String,System.String,System.Int32,System.String,System.String)">
             <summary>
             CTOR
             </summary>
@@ -500,6 +500,11 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.Description">
             <summary>
             Description
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.Locale">
+            <summary>
+            Locale
             </summary>
         </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo.IsoCurrencyCodeTextIsInList">
@@ -651,6 +656,25 @@
             Money
             </summary>
         </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.#ctor">
+            <summary>
+            CTOR
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.#ctor(System.Decimal,System.String)">
+            <summary>
+            CTOR
+            </summary>
+            <param name="amount">(sic)</param>
+            <param name="currencyCodeText">(sic)</param>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.#ctor(System.Decimal,StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo)">
+            <summary>
+            CTOR
+            </summary>
+            <param name="amount">decimal</param>
+            <param name="currencyInfo">CurrencyInfo</param>
+        </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Money.Amount">
             <summary>
             Amount
@@ -660,6 +684,31 @@
             <summary>
             CurrencyInfo
             </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.IsValid">
+            <summary>
+            Is Valid
+            </summary>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.GetHashCode">
+            <summary>
+            Get HashCode
+            </summary>
+            <returns>HashCode</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.Equals(System.Object)">
+            <summary>
+            Equals
+            </summary>
+            <param name="obj">that</param>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.ToString">
+            <summary>
+            Debug String
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Person">
             <summary>

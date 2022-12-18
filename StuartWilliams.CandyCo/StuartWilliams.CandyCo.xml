@@ -279,6 +279,37 @@
             People
             </summary>
         </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates">
+            <summary>
+            Interface: GPS Coordinates
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates.Confidence">
+            <summary>
+            Confidence as a Percent
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates.Elevation">
+            <summary>
+            Elevation
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates.Latitude">
+            <summary>
+            Latitude
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates.Longitude">
+            <summary>
+            Longitude
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates.IsValid">
+            <summary>
+            Is Valid GeoCode
+            </summary>
+            <returns>True if so</returns>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem">
             <summary>
             Interface: Inventory Item
@@ -360,6 +391,89 @@
             Transaction User
             </summary>
         </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation">
+            <summary>
+            Model: Location
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.LocationName">
+            <summary>
+            Location Name
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.Kind">
+            <summary>
+            Location Kind
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.Addreesee">
+            <summary>
+            Who / What is Receiving
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.AddressLine1">
+            <summary>
+            Primary Address Line
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.AddressLine2">
+            <summary>
+            Address Line 2
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.AddressLine3">
+            <summary>
+            Address Line 3
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.AddressLine4">
+            <summary>
+            Address Line 4
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.City">
+            <summary>
+            City
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.StateOrProvince">
+            <summary>
+            State Or Province
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.PostalCode">
+            <summary>
+            Postal Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.Coordinates">
+            <summary>
+            GPS Coordinates
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.IsValidMailingAddress">
+            <summary>
+            Mailing Address: Is Valid
+            </summary>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.IsGeoCoded">
+            <summary>
+            GeoCoded: Is Coded
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.IsLocationRecord">
+            <summary>
+            Is this a valid DB location record
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IMoney">
             <summary>
             Interface: Money
@@ -421,15 +535,61 @@
             Address
             </summary>
         </member>
-        <member name="T:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList">
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode">
             <summary>
-            List: ISO 4217 Curency Code
+            UniversalProductCode (UPC-A) 12 Digits
+            <para>Identifier for a Product</para>
+            <list type="bullet">
+            <listheader>Sections (total of 4, space separated)</listheader>
+            <item>Product Type (1) 0</item>
+            <item>Company Code (5) 1..{5}</item>
+            <item>Inventory Id (5) 6..{5}</item>
+            <item>Check Digit  (1) 11..</item>
+            </list>
+            <para><![CDATA[https://www.gtin.info/barcode-101/]]></para>
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList.Iso4217">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.UpcKind">
             <summary>
-            List of Codes
+            Style of Encoding
             </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.ProductTypeDefault">
+            <summary>
+            0: General Merchandise
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.ProductType">
+            <summary>
+            Leftmost single digit indicating product type
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.CompanyCode">
+            <summary>
+            Company Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.InventoryId">
+            <summary>
+            Inventory Id for the company code up to 5 digits
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.CheckSum">
+            <summary>
+            Checksum
+            <para><![CDATA[https://en.wikipedia.org/wiki/Check_digit#UPC]]></para>
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.CheckSumUpdate">
+            <summary>
+            CheckSum Update on this Instance
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.IsValid">
+            <summary>
+            Is this a valid UPC
+            </summary>
+            <returns>True if so</returns>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Company">
             <summary>
@@ -911,6 +1071,16 @@
             To String w/o spaces or checksum
             </summary>
             <returns>(sic)</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList">
+            <summary>
+            List: ISO 4217 Curency Code
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList.Iso4217">
+            <summary>
+            List of Codes
+            </summary>
         </member>
     </members>
 </doc>

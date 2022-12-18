@@ -1,24 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
+using StuartWilliams.CandyCo.SharedKernels.Models;
+using System.ComponentModel.DataAnnotations;
 
-using StuartWilliams.CandyCo.SharedKernels.Enums;
-using StuartWilliams.CandyCo.SharedKernels.Interfaces;
-
-namespace StuartWilliams.CandyCo.SharedKernels.Models
+namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
 {
     /// <summary>
     /// Model: Location
     /// </summary>
-    public class Location : ILocation
+    public interface ILocation
     {
         /// <summary>
         /// PK
         /// </summary>
-        public long Id { get; set; }
+        long Id { get; set; }
 
         /// <summary>
         /// Location Name
         /// </summary>
-        public string LocationName { get; set; }
+        string LocationName { get; set; }
 
         /// <summary>
         /// Location Kind
@@ -75,51 +74,19 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// Mailing Address: Is Valid
         /// </summary>
         /// <returns>True if so</returns>
-        public bool IsValidMailingAddress()
-        {
-            return
-                !string.IsNullOrEmpty(this.Addreesee) &&
-                !string.IsNullOrEmpty(this.AddressLine1) &&
-                !string.IsNullOrEmpty(this.AddressLine1) &&
-                !string.IsNullOrEmpty(this.City) &&
-                !string.IsNullOrEmpty(this.StateOrProvince) &&
-                !string.IsNullOrEmpty(this.PostalCode) &&
-                (this.Kind != LocationKind.Unknown)
-                ;
-        }
+        public bool IsValidMailingAddress();
 
         /// <summary>
         /// GeoCoded: Is Coded
         /// </summary>
         /// <returns></returns>
-        public bool IsGeoCoded()
-        {
-            if (this.Coordinates == null) return false;
-
-            return
-                (this.Coordinates.Confidence > 0) &&
-                (this.Coordinates.Latitude != 0) &&
-                (this.Coordinates.Longitude != 0)
-                ;
-        }
+        public bool IsGeoCoded();
 
         /// <summary>
         /// Is this a valid DB location record
         /// </summary>
         /// <returns></returns>
-        public bool IsLocationRecord()
-        {
-            return
-                (
-                    (this.Id != 0) &&
-                    !string.IsNullOrWhiteSpace(this.LocationName) &&
-                    (this.Kind != LocationKind.Unknown)
-                ) && (
-                    this.IsGeoCoded() ||
-                    this.IsValidMailingAddress()
-                )
-                ;
-        }
+        public bool IsLocationRecord();
 
     }
 }

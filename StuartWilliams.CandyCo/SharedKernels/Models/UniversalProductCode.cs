@@ -16,7 +16,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
     /// </list>
     /// <para><![CDATA[https://www.gtin.info/barcode-101/]]></para>
     /// </summary>
-    public class UniversalProductCode
+    public class UniversalProductCode : IUniversalProductCode
     {
         #region "CTOR"
 

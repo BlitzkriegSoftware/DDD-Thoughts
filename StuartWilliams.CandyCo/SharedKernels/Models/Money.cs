@@ -74,9 +74,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         {
             if (obj == null) return false;
             if (obj == this) return true;
-            var that = obj as Money;
-            if (that == null) return false;
-            return
+            return obj is Money that &&
                 this.Amount.Equals(that.Amount) &&
                 this.CurrencyInfo.Equals(that.CurrencyInfo);
         }

@@ -1,9 +1,11 @@
-﻿namespace StuartWilliams.CandyCo.SharedKernels.Models
+﻿using StuartWilliams.CandyCo.SharedKernels.Interfaces;
+
+namespace StuartWilliams.CandyCo.SharedKernels.Models
 {
     /// <summary>
     /// Gps Coordinates
     /// </summary>
-    public class GpsCoordinates
+    public class GpsCoordinates : IGpsCoordinates
     {
         /// <summary>
         /// Latitude

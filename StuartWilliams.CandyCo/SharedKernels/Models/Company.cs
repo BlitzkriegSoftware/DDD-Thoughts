@@ -39,5 +39,10 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// </summary>
         public List<Models.Person> People { get; set; }
 
+        /// <summary>
+        /// Is Deleted
+        /// </summary>
+        public bool IsDeleted { get; set; }
+
     }
 }

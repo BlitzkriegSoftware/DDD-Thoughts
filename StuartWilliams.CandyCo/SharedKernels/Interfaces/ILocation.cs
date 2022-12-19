@@ -88,5 +88,10 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         /// <returns></returns>
         public bool IsLocationRecord();
 
+        /// <summary>
+        /// Is Deleted
+        /// </summary>
+        public bool IsDeleted { get; set; }
+
     }
 }

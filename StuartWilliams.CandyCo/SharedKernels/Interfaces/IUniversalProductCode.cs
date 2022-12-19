@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using System;
+using StuartWilliams.CandyCo.SharedKernels.Enums;
 
 namespace StuartWilliams.CandyCo.SharedKernels.Models
 {
@@ -55,6 +56,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// CheckSum Update on this Instance
         /// </summary>
         public void CheckSumUpdate();
+
+        /// <summary>
+        /// Kind: Inventory Status
+        /// </summary>
+        public InventoryStatusKind InventoryStatus { get; set; }
 
         /// <summary>
         /// Is this a valid UPC

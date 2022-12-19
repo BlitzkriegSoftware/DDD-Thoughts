@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
+using System;
 using System.Text.RegularExpressions;
 
 namespace StuartWilliams.CandyCo.SharedKernels.Models
@@ -114,6 +115,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
             if (!DigitsOnly.IsMatch(upc)) isOk = false;
             return isOk;
         }
+
+        /// <summary>
+        /// Kind: Inventory Status
+        /// </summary>
+        public InventoryStatusKind InventoryStatus { get; set; }
 
         #endregion
 

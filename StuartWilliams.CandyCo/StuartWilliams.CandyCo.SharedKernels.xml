@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>StuartWilliams.CandyCo</name>
+        <name>StuartWilliams.CandyCo.SharedKernels</name>
     </assembly>
     <members>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind">
@@ -107,6 +107,31 @@
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.InventoryReturnToVendor">
             <summary>
             Inventory Return To Vendor
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryStatusKind">
+            <summary>
+            Kind: Inventory Status
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryStatusKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryStatusKind.Active">
+            <summary>
+            Active, can be sold or ordered, back order ok
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryStatusKind.Unavailable">
+            <summary>
+            Unavailable to be ordered, can be sold if in stock, no back order
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryStatusKind.Banned">
+            <summary>
+            Banned, not to be ordered or sold
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind">
@@ -279,6 +304,11 @@
             People
             </summary>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates">
             <summary>
             Interface: GPS Coordinates
@@ -345,6 +375,11 @@
             Is Valid
             </summary>
             <returns>True if so</returns>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory">
             <summary>
@@ -474,6 +509,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IMoney">
             <summary>
             Interface: Money
@@ -535,6 +575,11 @@
             Address
             </summary>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode">
             <summary>
             UniversalProductCode (UPC-A) 12 Digits
@@ -585,6 +630,11 @@
             CheckSum Update on this Instance
             </summary>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.InventoryStatus">
+            <summary>
+            Kind: Inventory Status
+            </summary>
+        </member>
         <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode.IsValid">
             <summary>
             Is this a valid UPC
@@ -619,6 +669,11 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.People">
             <summary>
             People
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.IsDeleted">
+            <summary>
+            Is Deleted
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo">
@@ -811,6 +866,11 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Money">
             <summary>
             Money
@@ -915,6 +975,11 @@
             Address
             </summary>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode">
             <summary>
             UniversalProductCode (UPC-A) 12 Digits
@@ -990,6 +1055,11 @@
             Is this a valid UPC
             </summary>
             <returns>True if so</returns>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.InventoryStatus">
+            <summary>
+            Kind: Inventory Status
+            </summary>
         </member>
         <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.UpcParse(System.String)">
             <summary>

@@ -38,5 +38,9 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         /// <returns>True if so</returns>
         public bool IsValid();
 
+        /// <summary>
+        /// Is Deleted
+        /// </summary>
+        public bool IsDeleted { get; set; }
     }
 }

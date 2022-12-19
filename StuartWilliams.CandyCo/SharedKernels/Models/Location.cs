@@ -121,5 +121,10 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
                 ;
         }
 
+        /// <summary>
+        /// Is Deleted
+        /// </summary>
+        public bool IsDeleted { get; set; }
+
     }
 }

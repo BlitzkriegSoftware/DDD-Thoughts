@@ -20,7 +20,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\StuartWilliams.CandyCo\StuartWilliams.CandyCo.csproj" />
+		<ProjectReference Include="..\StuartWilliams.CandyCo\StuartWilliams.CandyCo.SharedKernels.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

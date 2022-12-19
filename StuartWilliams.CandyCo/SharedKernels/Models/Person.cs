@@ -53,5 +53,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// Address
         /// </summary>
         public Location Address { get; set; }
+
+        /// <summary>
+        /// Is Deleted
+        /// </summary>
+        public bool IsDeleted { get; set; }
+
     }
 }

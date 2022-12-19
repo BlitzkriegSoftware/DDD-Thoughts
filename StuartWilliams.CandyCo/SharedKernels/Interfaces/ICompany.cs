@@ -33,5 +33,10 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         /// People
         /// </summary>
         List<Person> People { get; set; }
+
+        /// <summary>
+        /// Is Deleted
+        /// </summary>
+        public bool IsDeleted { get; set; }
     }
 }

@@ -7,7 +7,7 @@
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
-		<DocumentationFile>.\StuartWilliams.CandyCo.xml</DocumentationFile>
+		<DocumentationFile>.\StuartWilliams.CandyCo.SharedKernels.xml</DocumentationFile>
 		<InformationalVersion>6.0.0</InformationalVersion>
 		<Description>This is a DDD example</Description>
 		<Copyright>(c) 2022 Stuart Williams</Copyright>

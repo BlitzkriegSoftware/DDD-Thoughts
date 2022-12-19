@@ -1,9 +1,11 @@
-﻿namespace StuartWilliams.CandyCo.Inventory
+﻿using StuartWilliams.CandyCo.SharedKernels.Interfaces;
+
+namespace StuartWilliams.CandyCo.Inventory
 {
     /// <summary>
     /// Interface: Inventory Management
     /// </summary>
-    public interface IInventoryManagement
+    public interface IInventoryManagement : ICrud
     {
 
     }

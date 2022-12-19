@@ -1,46 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StuartWilliams.CandyCo.SharedKernels.Enums
+namespace StuartWilliams.CandyCo.Directory.Enums
 {
     /// <summary>
-    /// Kind: of Person
+    /// Kind: Directory Search Scope
     /// </summary>
     [Flags]
-    public enum PersonKind
+    public enum DirectorySearchScopeKind
     {
         /// <summary>
         /// Unknown
         /// </summary>
         Unknown = 0,
+        /// <summary>
+        /// Person
+        /// </summary>
+        Person = 1,
+        /// <summary>
+        /// Company
+        /// </summary>
+        Company = 2,
 
         /// <summary>
-        /// Primary
+        /// Both Company and Person
         /// </summary>
-        Primary = 1,
-
-        /// <summary>
-        /// Sales
-        /// </summary>
-        Sales = 2,
-
-        /// <summary>
-        /// Receiving
-        /// </summary>
-        Receiving = 4,
-
-        /// <summary>
-        /// Carrier
-        /// </summary>
-        Carrier = 8,
-
-        /// <summary>
-        /// Other
-        /// </summary>
-        Other = 16,
-
+        Both = Person | 
+               Company
     }
 }

@@ -1,9 +1,11 @@
-﻿namespace StuartWilliams.CandyCo.Procurement
+﻿using StuartWilliams.CandyCo.SharedKernels.Interfaces;
+
+namespace StuartWilliams.CandyCo.Procurement
 {
     /// <summary>
     /// Interface: Purchase Order Management
     /// </summary>
-    public interface IPurchaseOrderManagement
+    public interface IPurchaseOrderManagement : ICrud
     {
 
     }

@@ -20,11 +20,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\StuartWilliams.CandyCo\StuartWilliams.CandyCo.SharedKernels.csproj" />
+	  <Folder Include="Libs\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Libs\" />
+	  <ProjectReference Include="..\StuartWilliams.CandyCo.SharedKernels\StuartWilliams.CandyCo.SharedKernels.csproj" />
 	</ItemGroup>
 
 </Project>

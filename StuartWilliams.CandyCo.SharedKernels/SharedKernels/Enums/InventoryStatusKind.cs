@@ -29,7 +29,15 @@ namespace StuartWilliams.CandyCo.SharedKernels.Enums
         /// <summary>
         /// Banned, not to be ordered or sold
         /// </summary>
-        Banned = 3,
+        Banned = 4,
+
+        /// <summary>
+        /// Any
+        /// </summary>
+        Any = InventoryStatusKind.Unknown |
+              InventoryStatusKind.Active | 
+              InventoryStatusKind.Unavailable |
+              InventoryStatusKind.Banned
 
     }
 }

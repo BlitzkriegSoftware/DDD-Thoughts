@@ -8,7 +8,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\StuartWilliams.CandyCo\StuartWilliams.CandyCo.SharedKernels.csproj" />
+		<ProjectReference Include="..\StuartWilliams.CandyCo.SharedKernels\StuartWilliams.CandyCo.SharedKernels.csproj" />
 	</ItemGroup>
 
 </Project>

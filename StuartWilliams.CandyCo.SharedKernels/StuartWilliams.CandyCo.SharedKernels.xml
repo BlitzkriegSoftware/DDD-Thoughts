@@ -29,6 +29,11 @@
             Other
             </summary>
         </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind.Any">
+            <summary>
+            Any
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType">
             <summary>
             Container Type
@@ -62,6 +67,11 @@
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Bag">
             <summary>
             Bag
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Any">
+            <summary>
+            Any
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind">
@@ -109,6 +119,11 @@
             Inventory Return To Vendor
             </summary>
         </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind.Any">
+            <summary>
+            Any
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryStatusKind">
             <summary>
             Kind: Inventory Status
@@ -134,6 +149,11 @@
             Banned, not to be ordered or sold
             </summary>
         </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryStatusKind.Any">
+            <summary>
+            Any
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind">
             <summary>
             Location Kind
@@ -157,6 +177,11 @@
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind.Land">
             <summary>
             Any place w/o active buidings e.g., empty-land, abandoned-property, etc.
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LocationKind.Any">
+            <summary>
+            Any
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind">
@@ -194,6 +219,11 @@
             Any Third Party not in above
             </summary>
         </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.LogisticsCenterKind.Any">
+            <summary>
+            Any shipping
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind">
             <summary>
             Packaging Unit Kind
@@ -212,6 +242,11 @@
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind.ContainerOfN">
             <summary>
             Comes in a container of N
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind.Both">
+            <summary>
+            Both
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind">
@@ -249,6 +284,11 @@
             Other
             </summary>
         </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind.Any">
+            <summary>
+            Any
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind">
             <summary>
             Kind: Promotion
@@ -272,6 +312,11 @@
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind.VolumeDiscount">
             <summary>
             Volume Discount
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.PromotionKind.Any">
+            <summary>
+            Any
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany">
@@ -308,6 +353,35 @@
             <summary>
             Is Deleted
             </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICrud">
+            <summary>
+            Interface: CRUD
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICrud.Delete``1(System.Int64)">
+            <summary>
+            Delete
+            </summary>
+            <typeparam name="T">type</typeparam>
+            <param name="Id">(pk)</param>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICrud.AddUpdate``1(``0)">
+            <summary>
+            Add/Update
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="model">Model of T</param>
+            <returns>Updated Model</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICrud.FindById``1(System.Int64)">
+            <summary>
+            Find by Id
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="Id">pk</param>
+            <returns>T or null</returns>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates">
             <summary>
@@ -578,6 +652,36 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.IsDeleted">
             <summary>
             Is Deleted
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase">
+            <summary>
+            Interface: Search Base
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.SearchPhrase">
+            <summary>
+            Search Phrase
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowWildCards">
+            <summary>
+            Allow: Wild Cards
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowLogicOperators">
+            <summary>
+            Allow: Logic Operators
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowStartsWith">
+            <summary>
+            Allow: Starts With
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowFuzzyMatch">
+            <summary>
+            Allow: Fuzzy Match
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode">

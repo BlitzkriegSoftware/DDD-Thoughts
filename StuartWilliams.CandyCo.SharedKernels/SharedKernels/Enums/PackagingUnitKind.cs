@@ -1,8 +1,11 @@
-﻿namespace StuartWilliams.CandyCo.SharedKernels.Enums
+﻿using System;
+
+namespace StuartWilliams.CandyCo.SharedKernels.Enums
 {
     /// <summary>
     /// Packaging Unit Kind
     /// </summary>
+    [Flags]
     public enum PackagingUnitKind
     {
         /// <summary>
@@ -18,7 +21,14 @@
         /// <summary>
         /// Comes in a container of N
         /// </summary>
-        ContainerOfN = 2
+        ContainerOfN = 2,
+
+        /// <summary>
+        /// Both
+        /// </summary>
+        Both = PackagingUnitKind.Unknown |
+               PackagingUnitKind.Each | 
+               PackagingUnitKind.ContainerOfN
 
     }
 }

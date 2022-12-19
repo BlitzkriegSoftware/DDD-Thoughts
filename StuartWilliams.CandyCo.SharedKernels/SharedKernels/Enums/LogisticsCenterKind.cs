@@ -1,8 +1,11 @@
-﻿namespace StuartWilliams.CandyCo.SharedKernels.Enums
+﻿using System;
+
+namespace StuartWilliams.CandyCo.SharedKernels.Enums
 {
     /// <summary>
     /// Kind: Logistics Center
     /// </summary>
+    [Flags]
     public enum LogisticsCenterKind
     {
         /// <summary>
@@ -22,17 +25,26 @@
         /// <summary>
         /// Shipper (LC at UPS, FedEx, etc.)
         /// </summary>
-        Shipper = 3,
+        Shipper = 4,
 
         /// <summary>
         /// Vendor Direct aka Drop-Ship
         /// </summary>
-        Vendor = 4,
+        Vendor = 8,
 
         /// <summary>
         /// Any Third Party not in above
         /// </summary>
-        ThirdParty = 5
+        ThirdParty = 16,
 
+        /// <summary>
+        /// Any shipping
+        /// </summary>
+        Any = LogisticsCenterKind.Unknown | 
+              LogisticsCenterKind.CompanyOwned | 
+              LogisticsCenterKind.CompanyOperated |
+              LogisticsCenterKind.Shipper | 
+              LogisticsCenterKind.Vendor | 
+              LogisticsCenterKind.ThirdParty
     }
 }

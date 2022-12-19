@@ -1,8 +1,11 @@
-﻿namespace StuartWilliams.CandyCo.SharedKernels.Enums
+﻿using System;
+
+namespace StuartWilliams.CandyCo.SharedKernels.Enums
 {
     /// <summary>
     /// Kind: Promotion
     /// </summary>
+    [Flags]
     public enum PromotionKind
     {
         /// <summary>
@@ -20,6 +23,14 @@
         /// <summary>
         /// Volume Discount
         /// </summary>
-        VolumeDiscount = 3
+        VolumeDiscount = 4,
+
+        /// <summary>
+        /// Any
+        /// </summary>
+        Any = PromotionKind.Unknown |
+              PromotionKind.PercentOff |
+              PromotionKind.SalePrice |
+              PromotionKind.VolumeDiscount
     }
 }

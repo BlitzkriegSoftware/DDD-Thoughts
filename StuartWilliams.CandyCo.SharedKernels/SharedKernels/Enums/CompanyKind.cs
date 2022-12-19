@@ -28,5 +28,13 @@ namespace StuartWilliams.CandyCo.SharedKernels.Enums
         /// Other
         /// </summary>
         Other = 4,
+
+        /// <summary>
+        /// Any
+        /// </summary>
+        Any = CompanyKind.Unknown | 
+              CompanyKind.Vendor | 
+              CompanyKind.Customer | 
+              CompanyKind.Other
     }
 }

@@ -1,8 +1,11 @@
-﻿namespace StuartWilliams.CandyCo.SharedKernels.Enums
+﻿using System;
+
+namespace StuartWilliams.CandyCo.SharedKernels.Enums
 {
     /// <summary>
     /// Inventory Change Operation Kind
     /// </summary>
+    [Flags]
     public enum InventoryChangeOperationKind
     {
         /// <summary>
@@ -20,23 +23,35 @@
         /// <summary>
         /// Inventory Loss Missing
         /// </summary>
-        InventoryLossMissing = 3,
+        InventoryLossMissing = 4,
         /// <summary>
         /// Inventory Loss Damaged
         /// </summary>
-        InventoryLossDamaged = 4,
+        InventoryLossDamaged = 8,
         /// <summary>
         /// Inventory Transfer
         /// </summary>
-        InventoryTransfer = 5,
+        InventoryTransfer = 16,
         /// <summary>
         /// Inventory Return From Customer
         /// </summary>
-        InventoryReturnFromCustomer = 6,
+        InventoryReturnFromCustomer = 32,
         /// <summary>
         /// Inventory Return To Vendor
         /// </summary>
-        InventoryReturnToVendor = 7
+        InventoryReturnToVendor = 64,
+
+        /// <summary>
+        /// Any
+        /// </summary>
+        Any = InventoryChangeOperationKind.Unknown |
+              InventoryChangeOperationKind.InboundAdd |
+              InventoryChangeOperationKind.OutboundMinus |
+              InventoryChangeOperationKind.InventoryLossMissing |
+              InventoryChangeOperationKind.InventoryLossDamaged |
+              InventoryChangeOperationKind.InventoryTransfer |
+              InventoryChangeOperationKind.InventoryReturnFromCustomer |
+              InventoryChangeOperationKind.InventoryReturnToVendor
 
     }
 }

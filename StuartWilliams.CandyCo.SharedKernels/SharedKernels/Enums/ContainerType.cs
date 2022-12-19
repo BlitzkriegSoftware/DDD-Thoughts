@@ -1,9 +1,12 @@
-﻿namespace StuartWilliams.CandyCo.SharedKernels.Enums
+﻿using System;
+
+namespace StuartWilliams.CandyCo.SharedKernels.Enums
 {
 
     /// <summary>
     /// Container Type
     /// </summary>
+    [Flags]
     public enum ContainerType
     {
         /// <summary>
@@ -24,17 +27,27 @@
         /// <summary>
         /// Pallet
         /// </summary>
-        Pallet = 3,
+        Pallet = 4,
 
         /// <summary>
         /// Drum
         /// </summary>
-        Drum = 4,
+        Drum = 8,
 
         /// <summary>
         /// Bag
         /// </summary>
-        Bag = 5
+        Bag = 16,
+
+        /// <summary>
+        /// Any
+        /// </summary>
+        Any = ContainerType.Unknown | 
+              ContainerType.Each | 
+              ContainerType.Box | 
+              ContainerType.Pallet | 
+              ContainerType.Drum | 
+              ContainerType.Bag
 
     }
 }

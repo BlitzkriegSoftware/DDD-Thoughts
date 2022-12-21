@@ -31,6 +31,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         public string NameFirst { get; set; }
 
         /// <summary>
+        /// Name
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
         /// E-Mail
         /// </summary>
         [DataType(DataType.EmailAddress)]

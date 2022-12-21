@@ -324,11 +324,6 @@
             Interface: Company
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.Id">
-            <summary>
-            PK
-            </summary>
-        </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.Address">
             <summary>
             Address
@@ -339,19 +334,9 @@
             Kind: Company
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.Name">
-            <summary>
-            Name
-            </summary>
-        </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.People">
             <summary>
             People
-            </summary>
-        </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany.IsDeleted">
-            <summary>
-            Is Deleted
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ICrud">
@@ -382,6 +367,32 @@
             <typeparam name="T">Type</typeparam>
             <param name="Id">pk</param>
             <returns>T or null</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity">
+            <summary>
+            Interface: Entity
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity.IsValid">
+            <summary>
+            Is Valid Entity
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IGpsCoordinates">
             <summary>
@@ -419,11 +430,6 @@
             Interface: Inventory Item
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.Id">
-            <summary>
-            PK
-            </summary>
-        </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.Upc">
             <summary>
             UPC
@@ -442,17 +448,6 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.LastUpdated">
             <summary>
             Last Updated
-            </summary>
-        </member>
-        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.IsValid">
-            <summary>
-            Is Valid
-            </summary>
-            <returns>True if so</returns>
-        </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItem.IsDeleted">
-            <summary>
-            Is Deleted
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IInventoryItemHistory">
@@ -503,16 +498,6 @@
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation">
             <summary>
             Model: Location
-            </summary>
-        </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.Id">
-            <summary>
-            PK
-            </summary>
-        </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.LocationName">
-            <summary>
-            Location Name
             </summary>
         </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.Kind">
@@ -577,17 +562,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.IsLocationRecord">
-            <summary>
-            Is this a valid DB location record
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ILocation.IsDeleted">
-            <summary>
-            Is Deleted
-            </summary>
-        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IMoney">
             <summary>
             Interface: Money
@@ -627,6 +601,11 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.NameFirst">
             <summary>
             Name: First
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Name">
+            <summary>
+            Name
             </summary>
         </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IPerson.Email">
@@ -780,6 +759,18 @@
             Is Deleted
             </summary>
         </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Company.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns>Clone with Id of Zero (0)</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Company.IsValid">
+            <summary>
+            Is Valid
+            </summary>
+            <returns>True if so</returns>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.CurrencyInfo">
             <summary>
             Currency Info (ISO 4217)
@@ -897,7 +888,7 @@
             PK
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.LocationName">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.Name">
             <summary>
             Location Name
             </summary>
@@ -964,11 +955,17 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Location.IsLocationRecord">
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Location.IsValid">
             <summary>
             Is this a valid DB location record
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Location.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns>Copy with Id of Zero (0)</returns>
         </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.IsDeleted">
             <summary>
@@ -1034,6 +1031,12 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.Money.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns>Exact Clone</returns>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Person">
             <summary>
             Person
@@ -1057,6 +1060,11 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.NameFirst">
             <summary>
             Name: First
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.Name">
+            <summary>
+            Name is first+(space)+last
             </summary>
         </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Person.Email">
@@ -1245,6 +1253,12 @@
             To String w/o spaces or checksum
             </summary>
             <returns>(sic)</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.UniversalProductCode.Clone">
+            <summary>
+            Clone
+            </summary>
+            <returns>Exact Clone</returns>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Lookups.CurencyCodeList">
             <summary>

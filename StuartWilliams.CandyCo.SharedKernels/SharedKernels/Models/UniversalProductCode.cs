@@ -281,6 +281,18 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
             var upc = ToStringNoSpace();
             return upc[..^1];
         }
+
+        /// <summary>
+        /// Clone
+        /// </summary>
+        /// <returns>Exact Clone</returns>
+        public object Clone()
+        {
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(this);
+            var entity = Newtonsoft.Json.JsonConvert.DeserializeObject<UniversalProductCode>(json);
+            return entity;
+        }
+
         #endregion
 
     }

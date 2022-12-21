@@ -12,7 +12,7 @@ namespace DDD_thoughts_test_example
     public class Money_Tests
     {
         #region "Test Boilerplate"
-        private static TestContext? _testContext;
+        private static TestContext _testContext;
 
         [ClassInitialize]
         public static void ClassInit(TestContext context)

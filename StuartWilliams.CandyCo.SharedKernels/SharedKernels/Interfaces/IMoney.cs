@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
 {
     /// <summary>
     /// Interface: Money
     /// </summary>
-    public interface IMoney
+    public interface IMoney : ICloneable
     {
         /// <summary>
         /// Amount

@@ -5,12 +5,8 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
     /// <summary>
     /// Interface: Inventory Item
     /// </summary>
-    public interface IInventoryItem
+    public interface IInventoryItem : IEntity, ICloneable
     {
-        /// <summary>
-        /// PK
-        /// </summary>
-        public long Id { get; set; }
 
         /// <summary>
         /// UPC
@@ -32,15 +28,5 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         /// </summary>
         public DateTime LastUpdated { get; set; }
 
-        /// <summary>
-        /// Is Valid
-        /// </summary>
-        /// <returns>True if so</returns>
-        public bool IsValid();
-
-        /// <summary>
-        /// Is Deleted
-        /// </summary>
-        public bool IsDeleted { get; set; }
     }
 }

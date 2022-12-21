@@ -10,7 +10,7 @@ namespace DDD_thoughts_test_example
     public class Location_Tests
     {
         #region "Test Boilerplate"
-        private static TestContext? _testContext;
+        private static TestContext _testContext;
 
         [ClassInitialize]
         public static void ClassInit(TestContext context)
@@ -25,7 +25,7 @@ namespace DDD_thoughts_test_example
             var model = new StuartWilliams.CandyCo.SharedKernels.Models.Location()
             {
                 Id = 1,
-                LocationName = "A Place",
+                Name = "A Place",
                 Addreesee = "Joe Gunchy",
                 AddressLine1 = "123 Main St",
                 AddressLine2 = "Floor 2",
@@ -44,8 +44,10 @@ namespace DDD_thoughts_test_example
                 }
             };
 
+            _testContext.WriteLine($"{model}");
+
             Assert.IsTrue(model.IsGeoCoded());
-            Assert.IsTrue(model.IsLocationRecord());
+            Assert.IsTrue(model.IsValid());
             Assert.IsTrue(model.IsValidMailingAddress());
         }
 
@@ -56,7 +58,7 @@ namespace DDD_thoughts_test_example
             var model = new Location()
             {
                 Id = 1,
-                LocationName = "A Place",
+                Name = "A Place",
                 Addreesee = "Joe Gunchy",
                 AddressLine1 = "123 Main St",
                 AddressLine2 = "Floor 2",
@@ -69,7 +71,7 @@ namespace DDD_thoughts_test_example
             };
 
             Assert.IsFalse(model.IsGeoCoded());
-            Assert.IsTrue(model.IsLocationRecord());
+            Assert.IsTrue(model.IsValid());
             Assert.IsTrue(model.IsValidMailingAddress());
         }
 
@@ -80,7 +82,7 @@ namespace DDD_thoughts_test_example
             var model = new StuartWilliams.CandyCo.SharedKernels.Models.Location()
             {
                 Id = 1,
-                LocationName = "A Place",
+                Name = "A Place",
                 Addreesee = "Joe Gunchy",
                 AddressLine1 = "123 Main St",
                 AddressLine2 = "Floor 2",
@@ -100,7 +102,7 @@ namespace DDD_thoughts_test_example
             };
 
             Assert.IsTrue(model.IsGeoCoded());
-            Assert.IsTrue(model.IsLocationRecord());
+            Assert.IsTrue(model.IsValid());
             Assert.IsFalse(model.IsValidMailingAddress());
         }
 
@@ -111,7 +113,7 @@ namespace DDD_thoughts_test_example
             var model = new StuartWilliams.CandyCo.SharedKernels.Models.Location()
             {
                 Id = 0,
-                LocationName = "A Place",
+                Name = "A Place",
                 Addreesee = "Joe Gunchy",
                 AddressLine1 = "123 Main St",
                 AddressLine2 = "Floor 2",
@@ -131,7 +133,7 @@ namespace DDD_thoughts_test_example
             };
 
             Assert.IsTrue(model.IsGeoCoded());
-            Assert.IsFalse(model.IsLocationRecord());
+            Assert.IsFalse(model.IsValid());
             Assert.IsTrue(model.IsValidMailingAddress());
         }
 

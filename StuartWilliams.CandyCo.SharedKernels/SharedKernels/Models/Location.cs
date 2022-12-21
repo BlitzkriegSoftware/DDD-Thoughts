@@ -1,5 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Security.Principal;
 using StuartWilliams.CandyCo.SharedKernels.Enums;
 using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 
@@ -8,7 +9,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
     /// <summary>
     /// Model: Location
     /// </summary>
-    public class Location : ILocation
+    public class Location : ILocation, IEntity, ICloneable
     {
         /// <summary>
         /// PK
@@ -18,7 +19,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// <summary>
         /// Location Name
         /// </summary>
-        public string LocationName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Location Kind
@@ -107,18 +108,30 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// Is this a valid DB location record
         /// </summary>
         /// <returns></returns>
-        public bool IsLocationRecord()
+        public bool IsValid()
         {
             return
                 (
                     (this.Id != 0) &&
-                    !string.IsNullOrWhiteSpace(this.LocationName) &&
+                    !string.IsNullOrWhiteSpace(this.Name) &&
                     (this.Kind != LocationKind.Unknown)
                 ) && (
                     this.IsGeoCoded() ||
                     this.IsValidMailingAddress()
                 )
                 ;
+        }
+
+        /// <summary>
+        /// Clone
+        /// </summary>
+        /// <returns>Copy with Id of Zero (0)</returns>
+        public object Clone()
+        {
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(this);
+            var entity = Newtonsoft.Json.JsonConvert.DeserializeObject<Location>(json);
+            entity.Id = 0;
+            return entity;
         }
 
         /// <summary>

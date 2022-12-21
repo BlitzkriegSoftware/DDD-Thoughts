@@ -1,5 +1,6 @@
-﻿using System.Text.RegularExpressions;
-using System;
+﻿using System;
+using System.Text.RegularExpressions;
+
 using StuartWilliams.CandyCo.SharedKernels.Enums;
 
 namespace StuartWilliams.CandyCo.SharedKernels.Models
@@ -17,7 +18,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
     /// </list>
     /// <para><![CDATA[https://www.gtin.info/barcode-101/]]></para>
     /// </summary>
-    public interface IUniversalProductCode
+    public interface IUniversalProductCode : ICloneable
     {
         #region "Const, Vars, Props"
 
@@ -69,6 +70,5 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         public bool IsValid();
 
         #endregion
-
     }
 }

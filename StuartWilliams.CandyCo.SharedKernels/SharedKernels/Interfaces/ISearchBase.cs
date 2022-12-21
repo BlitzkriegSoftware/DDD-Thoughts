@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
+﻿namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
 {
     /// <summary>
     /// Interface: Search Base

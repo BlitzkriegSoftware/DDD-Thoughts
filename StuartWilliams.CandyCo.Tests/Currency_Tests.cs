@@ -14,7 +14,7 @@ namespace DDD_thoughts_test_example
     public class Currency_Tests
     {
         #region "Test Boilerplate"
-        private static TestContext? _testContext;
+        private static TestContext _testContext;
 
         [ClassInitialize]
         public static void ClassInit(TestContext context)

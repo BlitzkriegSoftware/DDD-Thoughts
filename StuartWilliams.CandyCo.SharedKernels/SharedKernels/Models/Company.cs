@@ -12,7 +12,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
     /// <summary>
     /// Company
     /// </summary>
-    public class Company : ICompany
+    public class Company : ICompany, IEntity, ICloneable
     {
         /// <summary>
         /// PK
@@ -44,5 +44,29 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// </summary>
         public bool IsDeleted { get; set; }
 
+        /// <summary>
+        /// Clone
+        /// </summary>
+        /// <returns>Clone with Id of Zero (0)</returns>
+        public object Clone()
+        {
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(this);
+            var entity = Newtonsoft.Json.JsonConvert.DeserializeObject<Company>(json);
+            entity.Id = 0;
+            return entity;
+        }
+
+        /// <summary>
+        /// Is Valid
+        /// </summary>
+        /// <returns>True if so</returns>
+        public bool IsValid()
+        {
+            return 
+                (Id !=0) &&
+                !string.IsNullOrWhiteSpace(this.Name) &&
+                (this.Kind != CompanyKind.Unknown)
+                ;
+        }
     }
 }

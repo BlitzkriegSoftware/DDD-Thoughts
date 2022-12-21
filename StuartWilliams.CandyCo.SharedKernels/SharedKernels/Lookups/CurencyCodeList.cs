@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+
 using StuartWilliams.CandyCo.SharedKernels.Models;
 
 namespace StuartWilliams.CandyCo.SharedKernels.Lookups

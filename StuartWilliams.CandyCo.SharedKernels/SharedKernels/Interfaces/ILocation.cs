@@ -1,23 +1,16 @@
-﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
-using StuartWilliams.CandyCo.SharedKernels.Models;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
+
+using StuartWilliams.CandyCo.SharedKernels.Enums;
+using StuartWilliams.CandyCo.SharedKernels.Models;
 
 namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
 {
     /// <summary>
     /// Model: Location
     /// </summary>
-    public interface ILocation
+    public interface ILocation : IEntity, ICloneable
     {
-        /// <summary>
-        /// PK
-        /// </summary>
-        long Id { get; set; }
-
-        /// <summary>
-        /// Location Name
-        /// </summary>
-        string LocationName { get; set; }
 
         /// <summary>
         /// Location Kind
@@ -81,17 +74,6 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         /// </summary>
         /// <returns></returns>
         public bool IsGeoCoded();
-
-        /// <summary>
-        /// Is this a valid DB location record
-        /// </summary>
-        /// <returns></returns>
-        public bool IsLocationRecord();
-
-        /// <summary>
-        /// Is Deleted
-        /// </summary>
-        public bool IsDeleted { get; set; }
 
     }
 }

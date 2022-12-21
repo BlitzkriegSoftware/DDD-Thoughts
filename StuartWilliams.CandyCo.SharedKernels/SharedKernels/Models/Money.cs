@@ -95,5 +95,15 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
             }
         }
 
+        /// <summary>
+        /// Clone
+        /// </summary>
+        /// <returns>Exact Clone</returns>
+        public object Clone()
+        {
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(this);
+            var entity = Newtonsoft.Json.JsonConvert.DeserializeObject<Money>(json);
+            return entity;
+        }
     }
 }

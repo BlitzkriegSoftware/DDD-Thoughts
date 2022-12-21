@@ -1,19 +1,16 @@
-﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
-using StuartWilliams.CandyCo.SharedKernels.Models;
+﻿using System;
 using System.Collections.Generic;
+
+using StuartWilliams.CandyCo.SharedKernels.Enums;
+using StuartWilliams.CandyCo.SharedKernels.Models;
 
 namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
 {
     /// <summary>
     /// Interface: Company
     /// </summary>
-    public interface ICompany
+    public interface ICompany : IEntity, ICloneable
     {
-        /// <summary>
-        /// PK
-        /// </summary>
-        long Id { get; set; }
-
         /// <summary>
         /// Address
         /// </summary>
@@ -25,18 +22,9 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         CompanyKind Kind { get; set; }
 
         /// <summary>
-        /// Name
-        /// </summary>
-        string Name { get; set; }
-
-        /// <summary>
         /// People
         /// </summary>
         List<Person> People { get; set; }
 
-        /// <summary>
-        /// Is Deleted
-        /// </summary>
-        public bool IsDeleted { get; set; }
     }
 }

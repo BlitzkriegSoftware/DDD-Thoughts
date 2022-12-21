@@ -35,6 +35,22 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         public string NameFirst { get; set; }
 
         /// <summary>
+        /// Name is first+(space)+last
+        /// </summary>
+        public string Name { 
+            get {  
+                return $"{NameFirst} {NameLast}"; 
+            } 
+            set {
+                if(string.IsNullOrWhiteSpace(value)) throw new ArgumentNullException(nameof(value));
+                var index = value.IndexOf(' ');
+                if (index == -1) throw new ArgumentException(nameof(value));
+                this.NameFirst= value.Substring(0, index);
+                this.NameLast= value.Substring(index + 1);
+            } 
+        } 
+
+        /// <summary>
         /// Email
         /// </summary>
         public string Email { get; set; }

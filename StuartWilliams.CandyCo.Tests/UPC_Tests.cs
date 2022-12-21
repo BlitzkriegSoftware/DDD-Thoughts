@@ -12,7 +12,7 @@ namespace DDD_thoughts_test_example
     {
 
         #region "Test Boilerplate"
-        private static TestContext? _testContext;
+        private static TestContext _testContext;
 
         [ClassInitialize]
         public static void ClassInit(TestContext context)
@@ -119,7 +119,7 @@ namespace DDD_thoughts_test_example
             };
             upc.CheckSumUpdate();
 
-            object o = new object();
+            object o = new();
 
             Assert.IsFalse(upc.Equals(o));
         }

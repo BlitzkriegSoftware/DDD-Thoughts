@@ -13,7 +13,7 @@ namespace DDD_thoughts_test_example
     public class Person_Tests
     {
         #region "Test Boilerplate"
-        private static TestContext? _testContext;
+        private static TestContext _testContext;
 
         [ClassInitialize]
         public static void ClassInit(TestContext context)
@@ -31,7 +31,7 @@ namespace DDD_thoughts_test_example
                 Address = new Location()
                 {
                     Id = 1,
-                    LocationName = "A Place",
+                    Name = "A Place",
                     Addreesee = "Joe Gunchy",
                     AddressLine1 = "123 Main St",
                     AddressLine2 = "Floor 2",

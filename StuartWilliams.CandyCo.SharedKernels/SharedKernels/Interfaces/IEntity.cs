@@ -11,6 +11,11 @@
         long Id { get; set; }
 
         /// <summary>
+        /// Parent Id
+        /// </summary>
+        long ParentId { get; set; }
+
+        /// <summary>
         /// Name
         /// </summary>
         string Name { get; set; }

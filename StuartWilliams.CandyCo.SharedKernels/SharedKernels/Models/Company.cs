@@ -20,6 +20,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         public long Id { get; set; }
 
         /// <summary>
+        /// Parent Id
+        /// </summary>
+        public long ParentId { get; set; }
+
+        /// <summary>
         /// Kind: Company
         /// </summary>
         public CompanyKind Kind { get; set; }

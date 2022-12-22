@@ -17,6 +17,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         public long Id { get; set; }
 
         /// <summary>
+        /// Parent Id
+        /// </summary>
+        public long ParentId { get; set; }
+
+        /// <summary>
         /// Location Name
         /// </summary>
         public string Name { get; set; }

@@ -29,6 +29,11 @@
             Other
             </summary>
         </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind.Ours">
+            <summary>
+            Our Company
+            </summary>
+        </member>
         <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.CompanyKind.Any">
             <summary>
             Any
@@ -376,6 +381,11 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity.Id">
             <summary>
             PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity.ParentId">
+            <summary>
+            Parent Id
             </summary>
         </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IEntity.Name">
@@ -734,6 +744,11 @@
             PK
             </summary>
         </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.ParentId">
+            <summary>
+            Parent Id
+            </summary>
+        </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Company.Kind">
             <summary>
             Kind: Company
@@ -847,6 +862,26 @@
             </summary>
             <returns>(sic)</returns>
         </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError.ErrorCode">
+            <summary>
+            Error Code
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError.ErrorMessage">
+            <summary>
+            Error Message
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError.Exception">
+            <summary>
+            Exception
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.GpsCoordinates">
             <summary>
             Gps Coordinates
@@ -878,6 +913,88 @@
             </summary>
             <returns>True if so</returns>
         </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeItem">
+            <summary>
+            Inventory Change Item
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeItem.ChangeOperationKind">
+            <summary>
+            Transfer Reason aka <c>InventoryChangeOperationKind</c>
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeItem.UPC">
+            <summary>
+            UPC
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeItem.Quantity">
+            <summary>
+            Quantity
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder">
+            <summary>
+            Inventory Transfer Order
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.FromCompany">
+            <summary>
+            From Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.ToCompany">
+            <summary>
+            To Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.RelatedTransactionId">
+            <summary>
+            Related Transaction Id
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.TransferDate">
+            <summary>
+            Transfer Date
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Items">
+            <summary>
+            Inventory Items
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Id">
+            <summary>
+            PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.ParentId">
+            <summary>
+            ParentId
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Name">
+            <summary>
+            Name (optional) as a note
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.IsDeleted">
+            <summary>
+            Is Deleted
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.IsValid">
+            <summary>
+            IsValid
+            </summary>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Clone">
+            <summary>
+            Clone (minus Id and Related Transaction Id)
+            </summary>
+            <returns>Clone</returns>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.Location">
             <summary>
             Model: Location
@@ -886,6 +1003,11 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.Id">
             <summary>
             PK
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.ParentId">
+            <summary>
+            Parent Id
             </summary>
         </member>
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.Location.Name">

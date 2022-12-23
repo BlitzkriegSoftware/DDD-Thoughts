@@ -9,7 +9,7 @@
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<DocumentationFile>.\StuartWilliams.CandyCo.SharedKernels.xml</DocumentationFile>
 		<InformationalVersion>6.0.0</InformationalVersion>
-		<Description>This is a DDD example</Description>
+		<Description>This is a DDD example: Shared Kernals</Description>
 		<Copyright>(c) 2022 Stuart Williams</Copyright>
 		<Authors>Stuart Williams</Authors>
 		<ApplicationIcon>BlitzkriegSoftware.ico</ApplicationIcon>

@@ -1,7 +1,7 @@
 ﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
 using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 
-namespace StuartWilliams.CandyCo.Inventory
+namespace StuartWilliams.CandyCo.Inventory.Interfaces
 {
     /// <summary>
     /// Interface: Inventory Search

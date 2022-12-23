@@ -1,6 +1,6 @@
 ﻿using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 
-namespace StuartWilliams.CandyCo.Sales
+namespace StuartWilliams.CandyCo.Sales.Interfaces
 {
     /// <summary>
     /// Interface: Sales Order Management

@@ -3,7 +3,7 @@
 using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 using StuartWilliams.CandyCo.SharedKernels.Models;
 
-namespace StuartWilliams.CandyCo.Inventory
+namespace StuartWilliams.CandyCo.Inventory.Interfaces
 {
 
     /// <summary>

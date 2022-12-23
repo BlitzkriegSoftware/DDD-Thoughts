@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StuartWilliams.CandyCo.Directory</name>
+    </assembly>
+    <members>
+        <member name="T:StuartWilliams.CandyCo.Directory.Enums.DirectorySearchScopeKind">
+            <summary>
+            Kind: Directory Search Scope
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Directory.Enums.DirectorySearchScopeKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Directory.Enums.DirectorySearchScopeKind.Person">
+            <summary>
+            Person
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Directory.Enums.DirectorySearchScopeKind.Company">
+            <summary>
+            Company
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Directory.Enums.DirectorySearchScopeKind.Both">
+            <summary>
+            Both Company and Person
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Directory.Interfaces.ICompanyManagement">
+            <summary>
+            Interface: Company Management
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Directory.Interfaces.ICompanyManagement.CompanyAssociatePerson(System.Int64,System.Int64,StuartWilliams.CandyCo.SharedKernels.Enums.PersonKind,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Associate a person to a company
+            </summary>
+            <param name="CompanyId">(pk)</param>
+            <param name="PersonId">(pk)</param>
+            <param name="newKinds">(flags) Person Kinds to Add (0 is none)</param>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Directory.Interfaces.ICompanyManagement.CompanyDisassociatePerson(System.Int64,System.Int64,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Disassociate a person from a company
+            </summary>
+            <param name="CompanyId">(pk)</param>
+            <param name="PersonId">(pk)</param>
+            <returns>True if so</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Directory.Interfaces.IDirectorySearch">
+            <summary>
+            Interface: Directory Search
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Directory.Interfaces.IDirectorySearch.DirectorySearchScope">
+            <summary>
+            Kind: Search Scope
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Directory.Interfaces.IPersonManagement">
+            <summary>
+            Interface: Person Management
+            </summary>
+        </member>
+    </members>
+</doc>

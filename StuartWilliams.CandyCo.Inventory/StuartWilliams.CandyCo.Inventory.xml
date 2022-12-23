@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StuartWilliams.CandyCo.Inventory</name>
+    </assembly>
+    <members>
+        <member name="T:StuartWilliams.CandyCo.Inventory.Interfaces.IInventoryManagement">
+            <summary>
+            Interface: Inventory Management
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Inventory.Interfaces.IInventoryManagement.Transfer(StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Transfer
+            </summary>
+            <param name="order">InventoryTransferOrder</param>
+            <param name="errors">(sic)</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Inventory.Interfaces.IInventoryManagement.Received(StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Received
+            </summary>
+            <param name="order">InventoryTransferOrder</param>
+            <param name="errors">(sic)</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Inventory.Interfaces.IInventoryManagement.Sold(StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Sold
+            </summary>
+            <param name="order">InventoryTransferOrder</param>
+            <param name="errors">(sic)</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Inventory.Interfaces.IInventoryManagement.Lost(StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Lost
+            </summary>
+            <param name="order">InventoryTransferOrder</param>
+            <param name="errors">(sic)</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Inventory.Interfaces.IInventoryManagement.Returned(StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Returned
+            </summary>
+            <param name="order">InventoryTransferOrder</param>
+            <param name="errors">(sic)</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch">
+            <summary>
+            Interface: Inventory Search
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch.ChangeOperationKind">
+            <summary>
+            Kind: Inventory Change Operation
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch.StatusKind">
+            <summary>
+            Kind: Inventory Status
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch.CenterKind">
+            <summary>
+            Kind: Logistics Center
+            </summary>
+        </member>
+    </members>
+</doc>

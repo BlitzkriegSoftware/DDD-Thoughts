@@ -2,7 +2,7 @@
 using StuartWilliams.CandyCo.SharedKernels.Models;
 using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 
-namespace StuartWilliams.CandyCo.Shipping
+namespace StuartWilliams.CandyCo.Freight.Interfaces
 {
     /// <summary>
     /// Interface: Freight Search
@@ -14,5 +14,6 @@ namespace StuartWilliams.CandyCo.Shipping
         /// Kind: Packing Unit
         /// </summary>
         public PackagingUnitKind PackagingUnit { get; set; }
+
     }
 }

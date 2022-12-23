@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StuartWilliams.CandyCo.Sales</name>
+    </assembly>
+    <members>
+        <member name="T:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderManagement">
+            <summary>
+            Interface: Sales Order Management
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderSearch">
+            <summary>
+            Interface: Sales Order Search
+            </summary>
+        </member>
+    </members>
+</doc>

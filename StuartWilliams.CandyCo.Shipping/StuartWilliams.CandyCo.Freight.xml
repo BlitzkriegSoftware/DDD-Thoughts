@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StuartWilliams.CandyCo.Freight</name>
+    </assembly>
+    <members>
+        <member name="T:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind">
+            <summary>
+            Kind: Shipper Event
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind.ShippingProgress">
+            <summary>
+            Shipping Progress
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind.Received">
+            <summary>
+            Received
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind.Damaged">
+            <summary>
+            Received
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind.Returned">
+            <summary>
+            Returned
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind.ReceivedDamaged">
+            <summary>
+            (sic)
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Freight.Enums.ShipperEventKind.ReturnedDamaged">
+            <summary>
+            (sic)
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Freight.Interfaces.IFreightManagment">
+            <summary>
+            Interface: Freight Managment
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Freight.Interfaces.IFreightManagment.FindShippers(StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Find shippers
+            </summary>
+            <param name="shippment">IShipment</param>
+            <param name="errors">(errors)</param>
+            <returns>List of shippers</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Freight.Interfaces.IFreightManagment.ConsignToShipper(StuartWilliams.CandyCo.SharedKernels.Interfaces.ICompany,StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
+            <summary>
+            Consign to shipper
+            </summary>
+            <param name="shipper">ICompany</param>
+            <param name="shippment">IShipment</param>
+            <param name="errors">(errors)</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Freight.Interfaces.IFreightManagment.ShipperStatusHandler">
+            <summary>
+            Event Handler Delegate: Shipper Status
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="E:StuartWilliams.CandyCo.Freight.Interfaces.IFreightManagment.ShipperReturnEvent">
+            <summary>
+            Event: Shipper Status
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearch">
+            <summary>
+            Interface: Freight Search
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearch.PackagingUnit">
+            <summary>
+            Kind: Packing Unit
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs">
+            <summary>
+            EventArgs: Shipper Return
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs.Shipper">
+            <summary>
+            PK: Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs.ShipmentId">
+            <summary>
+            PK: Shipment
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs.EventTimeStamp">
+            <summary>
+            TimeStamp: Event
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs.Reason">
+            <summary>
+            Reason
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs.ShipperEvent">
+            <summary>
+            Reason Kind
+            </summary>
+        </member>
+    </members>
+</doc>

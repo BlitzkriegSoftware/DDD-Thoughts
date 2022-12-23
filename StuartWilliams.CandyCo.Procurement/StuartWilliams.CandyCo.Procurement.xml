@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StuartWilliams.CandyCo.Procurement</name>
+    </assembly>
+    <members>
+        <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderManagement">
+            <summary>
+            Interface: Purchase Order Management
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearch">
+            <summary>
+            Interface: Purchase Order Search
+            </summary>
+        </member>
+    </members>
+</doc>

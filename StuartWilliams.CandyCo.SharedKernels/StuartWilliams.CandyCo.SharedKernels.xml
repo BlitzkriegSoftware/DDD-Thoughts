@@ -79,6 +79,41 @@
             Any
             </summary>
         </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.ContentsKind">
+            <summary>
+            Kind: Contents
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContentsKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContentsKind.Solid">
+            <summary>
+            Solids
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContentsKind.Liquid">
+            <summary>
+            Liquid
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContentsKind.Gas">
+            <summary>
+            Gas
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContentsKind.Fragile">
+            <summary>
+            Fragile
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContentsKind.Volatile">
+            <summary>
+            Volatile: Dangerous
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.InventoryChangeOperationKind">
             <summary>
             Inventory Change Operation Kind
@@ -671,6 +706,46 @@
         <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowFuzzyMatch">
             <summary>
             Allow: Fuzzy Match
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment">
+            <summary>
+            Interface: Shipment
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment.Weight">
+            <summary>
+            Weight in Killos 
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment.Container">
+            <summary>
+            Container
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment.Contents">
+            <summary>
+            Contents
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment.FromCompany">
+            <summary>
+            From Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment.ToCompany">
+            <summary>
+            To Company
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment.FromLocation">
+            <summary>
+            Location: From
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.IShipment.ToLocation">
+            <summary>
+            Location: To
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.IUniversalProductCode">

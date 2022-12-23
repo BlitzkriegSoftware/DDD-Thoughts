@@ -1,14 +1,52 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<LangVersion>9.0</LangVersion>
 		<ImplicitUsings>disable</ImplicitUsings>
 		<Nullable>disable</Nullable>
+		<ApplicationIcon>BlitzkriegSoftware.ico</ApplicationIcon>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>.\StuartWilliams.CandyCo.Freight.xml</DocumentationFile>
+		<Title>StuartWilliams.CandyCo.Freight (facade)</Title>
+		<Copyright>(c) 2022-2023 Stuart Williams/Blitzkrieg Software</Copyright>
+		<PackageProjectUrl>https://github.com/BlitzkriegSoftware/DDD-Thoughts</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/BlitzkriegSoftware/DDD-Thoughts</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>blizkrieglogo300.png</PackageIcon>
+		<PackageTags>DDD; CandyCo; Freight</PackageTags>
+		<Description>DDD: C# example: Freight/Shipping</Description>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<WarningLevel>5</WarningLevel>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<None Remove="BlitzkriegSoftware.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="BlitzkriegSoftware.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\blizkrieglogo300.png" Link="blizkrieglogo300.png">
+			<PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	</ItemGroup>
 
 	<ItemGroup>

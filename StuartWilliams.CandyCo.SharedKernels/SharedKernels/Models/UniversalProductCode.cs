@@ -1,4 +1,5 @@
-﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
+﻿using Newtonsoft.Json;
+using StuartWilliams.CandyCo.SharedKernels.Enums;
 using System;
 using System.Text.RegularExpressions;
 
@@ -42,6 +43,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// <summary>
         /// RegEx: Digits Only
         /// </summary>
+        [JsonIgnore]
         public readonly Regex DigitsOnly = new("^[0-9]+$");
 
         /// <summary>

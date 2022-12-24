@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
+using BlitzkriegSoftware.MsTest;
+using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 using StuartWilliams.CandyCo.SharedKernels.Models;
@@ -72,6 +74,9 @@ namespace DDD_thoughts_test_example
             upc2.CheckSumUpdate();
 
             Assert.IsTrue(upc.Equals(upc2));
+
+            UniversalProductCode clone = (UniversalProductCode)upc.Clone();
+            Assert.IsTrue(upc.Equals(clone));
         }
 
         [TestMethod]
@@ -163,6 +168,7 @@ namespace DDD_thoughts_test_example
             UniversalProductCode upc = new(upcText);
             var actual = upc.GetHashCode();
             Assert.AreEqual(expected, actual);
+            TestJsonSerializationHelper.AssertJsonSerialization<UniversalProductCode>(_testContext, upc);
         }
 
     }

@@ -20,7 +20,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         /// <summary>
         /// UPC
         /// </summary>
-        public IUniversalProductCode UPC { get; set; }
+        public UniversalProductCode UPC { get; set; }
 
         /// <summary>
         /// Quantity

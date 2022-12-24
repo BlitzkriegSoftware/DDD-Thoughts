@@ -44,9 +44,9 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
             set {
                 if(string.IsNullOrWhiteSpace(value)) throw new ArgumentNullException(nameof(value));
                 var index = value.IndexOf(' ');
-                if (index == -1) throw new ArgumentException(nameof(value));
-                this.NameFirst= value.Substring(0, index);
-                this.NameLast= value.Substring(index + 1);
+                if (index == -1) throw new ArgumentException("Index must be zero+", nameof(value));
+                NameFirst = value[..index];
+                NameLast = value[(index + 1)..];
             } 
         } 
 

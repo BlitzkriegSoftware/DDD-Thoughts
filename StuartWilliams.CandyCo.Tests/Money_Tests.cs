@@ -31,6 +31,9 @@ namespace DDD_thoughts_test_example
             };
 
             TestJsonSerializationHelper.AssertJsonSerialization<Money>(_testContext, model);
+
+            Money clone = (Money)model.Clone();
+            Assert.IsTrue(clone.IsValid());
         }
 
         [TestMethod]

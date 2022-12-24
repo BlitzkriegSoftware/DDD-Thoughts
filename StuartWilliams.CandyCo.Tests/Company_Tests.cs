@@ -23,8 +23,7 @@ namespace DDD_thoughts_test_example
         }
         #endregion
 
-        [TestMethod]
-        public void Company_Serialization()
+        private static Company ModelMake()
         {
             Company model = new()
             {
@@ -68,7 +67,26 @@ namespace DDD_thoughts_test_example
                     }
                 }
             };
+            return model;
+        }
+
+        [TestMethod]
+        public void Company_Serialization()
+        {
+            var model = ModelMake();
             TestJsonSerializationHelper.AssertJsonSerialization<Company>(_testContext, model);
         }
+
+        [TestMethod]
+        public void Test_Clone()
+        {
+            var model = ModelMake();
+            Company clone = (Company) model.Clone();
+            Assert.AreEqual(0, clone.Id);
+            Assert.IsFalse(clone.IsValid());
+            Assert.IsTrue(model.IsValid());
+        }
+
+
     }
 }

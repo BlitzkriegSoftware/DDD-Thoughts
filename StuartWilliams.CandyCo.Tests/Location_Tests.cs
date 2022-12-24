@@ -2,6 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using StuartWilliams.CandyCo.SharedKernels.Models;
 using StuartWilliams.CandyCo.SharedKernels.Enums;
+using BlitzkriegSoftware.MsTest;
 
 namespace DDD_thoughts_test_example
 {
@@ -49,6 +50,11 @@ namespace DDD_thoughts_test_example
             Assert.IsTrue(model.IsGeoCoded());
             Assert.IsTrue(model.IsValid());
             Assert.IsTrue(model.IsValidMailingAddress());
+
+            TestJsonSerializationHelper.AssertJsonSerialization<Location>(_testContext, model);
+
+            Location clone = (Location) model.Clone();
+            Assert.IsFalse(clone.IsValid());
         }
 
 
@@ -137,7 +143,6 @@ namespace DDD_thoughts_test_example
             Assert.IsTrue(model.IsValidMailingAddress());
         }
 
-
         [TestMethod]
         public void GeoCode_IsValid()
         {
@@ -151,5 +156,6 @@ namespace DDD_thoughts_test_example
 
             Assert.IsTrue(model.IsValid());
         }
+
     }
 }

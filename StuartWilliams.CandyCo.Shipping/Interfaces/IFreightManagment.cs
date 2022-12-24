@@ -39,6 +39,6 @@ namespace StuartWilliams.CandyCo.Freight.Interfaces
         /// <summary>
         /// Event: Shipper Status
         /// </summary>
-        event ShipperStatusHandler ShipperReturnEvent;
+        event ShipperStatusHandler ShipperStatusEvent;
     }
 }

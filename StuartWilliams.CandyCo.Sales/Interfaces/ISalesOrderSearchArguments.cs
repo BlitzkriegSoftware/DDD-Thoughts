@@ -5,7 +5,7 @@ namespace StuartWilliams.CandyCo.Sales.Interfaces
     /// <summary>
     /// Interface: Sales Order Search
     /// </summary>
-    public interface ISalesOrderSearch : ISearchBase
+    public interface ISalesOrderSearchArguments : ISearchArgumentsBase
     {
 
     }

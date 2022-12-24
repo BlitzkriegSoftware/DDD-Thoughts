@@ -9,6 +9,9 @@ namespace StuartWilliams.CandyCo.Freight.Models
     /// </summary>
     public class ShipperEventArgs : EventArgs
     {
+        /// <summary>
+        /// CTOR
+        /// </summary>
         public ShipperEventArgs() : base() { }
        
         /// <summary>

@@ -5,7 +5,7 @@ namespace StuartWilliams.CandyCo.Procurement.Interfaces
     /// <summary>
     /// Interface: Purchase Order Search
     /// </summary>
-    public interface IPurchaseOrderSearch : ISearchBase
+    public interface IPurchaseOrderSearchArguments : ISearchArgumentsBase
     {
 
     }

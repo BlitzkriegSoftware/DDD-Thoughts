@@ -3,7 +3,7 @@
     /// <summary>
     /// Interface: Search Base
     /// </summary>
-    public interface ISearchBase
+    public interface ISearchArgumentsBase
     {
 
         /// <summary>

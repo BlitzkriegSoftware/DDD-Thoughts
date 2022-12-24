@@ -9,7 +9,7 @@
             Interface: Sales Order Management
             </summary>
         </member>
-        <member name="T:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderSearch">
+        <member name="T:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderSearchArguments">
             <summary>
             Interface: Sales Order Search
             </summary>

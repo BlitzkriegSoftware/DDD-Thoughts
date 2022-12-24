@@ -49,22 +49,22 @@
             <param name="errors">(sic)</param>
             <returns>True on success</returns>
         </member>
-        <member name="T:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch">
+        <member name="T:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearchArguments">
             <summary>
             Interface: Inventory Search
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch.ChangeOperationKind">
+        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearchArguments.ChangeOperationKind">
             <summary>
             Kind: Inventory Change Operation
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch.StatusKind">
+        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearchArguments.StatusKind">
             <summary>
             Kind: Inventory Status
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearch.CenterKind">
+        <member name="P:StuartWilliams.CandyCo.Inventory.Interfaces.IInventorySearchArguments.CenterKind">
             <summary>
             Kind: Logistics Center
             </summary>

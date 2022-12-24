@@ -9,7 +9,7 @@
             Interface: Purchase Order Management
             </summary>
         </member>
-        <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearch">
+        <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearchArguments">
             <summary>
             Interface: Purchase Order Search
             </summary>

@@ -6,7 +6,7 @@ namespace StuartWilliams.CandyCo.Inventory.Interfaces
     /// <summary>
     /// Interface: Inventory Search
     /// </summary>
-    public interface IInventorySearch : ISearchBase
+    public interface IInventorySearchArguments : ISearchArgumentsBase
     {
         /// <summary>
         /// Kind: Inventory Change Operation

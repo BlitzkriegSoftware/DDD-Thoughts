@@ -41,6 +41,7 @@
             <param name="CompanyId">(pk)</param>
             <param name="PersonId">(pk)</param>
             <param name="newKinds">(flags) Person Kinds to Add (0 is none)</param>
+            <param name="errors">(sic)</param>
             <returns>True if so</returns>
         </member>
         <member name="M:StuartWilliams.CandyCo.Directory.Interfaces.ICompanyManagement.CompanyDisassociatePerson(System.Int64,System.Int64,System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.SharedKernels.Models.CandyCoError}@)">
@@ -49,14 +50,15 @@
             </summary>
             <param name="CompanyId">(pk)</param>
             <param name="PersonId">(pk)</param>
+            <param name="errors">(sic)</param>
             <returns>True if so</returns>
         </member>
-        <member name="T:StuartWilliams.CandyCo.Directory.Interfaces.IDirectorySearch">
+        <member name="T:StuartWilliams.CandyCo.Directory.Interfaces.IDirectorySearchArguments">
             <summary>
             Interface: Directory Search
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.Directory.Interfaces.IDirectorySearch.DirectorySearchScope">
+        <member name="P:StuartWilliams.CandyCo.Directory.Interfaces.IDirectorySearchArguments.DirectorySearchScope">
             <summary>
             Kind: Search Scope
             </summary>

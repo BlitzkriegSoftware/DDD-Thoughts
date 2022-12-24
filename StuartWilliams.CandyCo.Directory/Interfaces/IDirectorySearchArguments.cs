@@ -5,7 +5,7 @@ namespace StuartWilliams.CandyCo.Directory.Interfaces
     /// <summary>
     /// Interface: Directory Search
     /// </summary>
-    public interface IDirectorySearch : ISearchBase
+    public interface IDirectorySearchArguments : ISearchArgumentsBase
     {
         /// <summary>
         /// Kind: Search Scope

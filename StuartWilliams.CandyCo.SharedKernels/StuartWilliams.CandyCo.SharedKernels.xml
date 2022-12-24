@@ -678,32 +678,32 @@
             Is Deleted
             </summary>
         </member>
-        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase">
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchArgumentsBase">
             <summary>
             Interface: Search Base
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.SearchPhrase">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchArgumentsBase.SearchPhrase">
             <summary>
             Search Phrase
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowWildCards">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchArgumentsBase.AllowWildCards">
             <summary>
             Allow: Wild Cards
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowLogicOperators">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchArgumentsBase.AllowLogicOperators">
             <summary>
             Allow: Logic Operators
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowStartsWith">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchArgumentsBase.AllowStartsWith">
             <summary>
             Allow: Starts With
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchBase.AllowFuzzyMatch">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Interfaces.ISearchArgumentsBase.AllowFuzzyMatch">
             <summary>
             Allow: Fuzzy Match
             </summary>

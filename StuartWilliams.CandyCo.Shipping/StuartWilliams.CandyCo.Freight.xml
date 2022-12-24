@@ -73,24 +73,44 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="E:StuartWilliams.CandyCo.Freight.Interfaces.IFreightManagment.ShipperReturnEvent">
+        <member name="E:StuartWilliams.CandyCo.Freight.Interfaces.IFreightManagment.ShipperStatusEvent">
             <summary>
             Event: Shipper Status
             </summary>
         </member>
-        <member name="T:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearch">
+        <member name="T:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearchArguments">
             <summary>
             Interface: Freight Search
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearch.PackagingUnit">
+        <member name="P:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearchArguments.PackagingUnit">
             <summary>
             Kind: Packing Unit
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearchArguments.ShipmentId">
+            <summary>
+            Shipment Id
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearchArguments.Shipper">
+            <summary>
+            Shipper
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Freight.Interfaces.IFreightSearchArguments.ShipTo">
+            <summary>
+            Ship To
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs">
             <summary>
             EventArgs: Shipper Return
+            </summary>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs.#ctor">
+            <summary>
+            CTOR
             </summary>
         </member>
         <member name="P:StuartWilliams.CandyCo.Freight.Models.ShipperEventArgs.Shipper">

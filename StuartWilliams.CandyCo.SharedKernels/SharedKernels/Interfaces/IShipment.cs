@@ -20,7 +20,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Interfaces
         /// <summary>
         /// Container
         /// </summary>
-        ContainerType Container { get; set; }
+        ContainerKind Container { get; set; }
 
         /// <summary>
         /// Contents

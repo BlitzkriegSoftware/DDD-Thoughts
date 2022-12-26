@@ -4,14 +4,171 @@
         <name>StuartWilliams.CandyCo.Procurement</name>
     </assembly>
     <members>
+        <member name="T:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind">
+            <summary>
+            Kind: Purchase Order Status
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Draft">
+            <summary>
+            Draft
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Approved">
+            <summary>
+            Approved to send
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Sent">
+            <summary>
+            Sent to Vendor
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.VendorAccepted">
+            <summary>
+            Accepted by Vendor
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.VendorRejected">
+            <summary>
+            Rejected by Vendor
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Cancelled">
+            <summary>
+            Cancelled by us
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Fullfilled">
+            <summary>
+            Fullfilled
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Problem">
+            <summary>
+            Problem
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Partial">
+            <summary>
+            Partially filled
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderManagement">
             <summary>
             Interface: Purchase Order Management
             </summary>
         </member>
+        <member name="M:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderManagement.FindVendorsForProducts(System.Collections.Generic.IEnumerable{StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments})">
+            <summary>
+            Find Vendors for a list of Products
+            </summary>
+            <param name="products">Find vendors that can supply these products</param>
+            <returns></returns>
+        </member>
         <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearchArguments">
             <summary>
             Interface: Purchase Order Search
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearchArguments.PurchaseOrderStatus">
+            <summary>
+            Kind: Purchase Order Status
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments">
+            <summary>
+            Product: Search Arguments
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.UPC">
+            <summary>
+            UPC
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.MaximumPrice">
+            <summary>
+            Maximum Price For This Product Per <c>Container</c>
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.Container">
+            <summary>
+            Container
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.QuantityNeeded">
+            <summary>
+            Quantity Needed
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.NeededByTimeStamp">
+            <summary>
+            Needed By TimeStamp
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.SearchPhrase">
+            <summary>
+            Search Phrase
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.AllowWildCards">
+            <summary>
+            Allow: Wild Cards
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.AllowLogicOperators">
+            <summary>
+            Allow: Logic Operators
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.AllowStartsWith">
+            <summary>
+            Allow: Starts With
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments.AllowFuzzyMatch">
+            <summary>
+            Allow: Fuzzy Match
+            </summary>
+        </member>
+        <member name="T:StuartWilliams.CandyCo.Procurement.Models.ProductSearchResult">
+            <summary>
+            Result: Product Search
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchResult.VendorId">
+            <summary>
+            PK (Company) of Vendor
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchResult.UPC">
+            <summary>
+            UPC
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchResult.QuotedPrice">
+            <summary>
+            Quoted (Vendor) Price For This Product Per <c>Container</c>
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchResult.Container">
+            <summary>
+            Container
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchResult.QuantityCanBeSupplied">
+            <summary>
+            Quantity Can Be Supplied
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Models.ProductSearchResult.DeliverableByTimeStamp">
+            <summary>
+            Deliverable By TimeStamp
             </summary>
         </member>
     </members>

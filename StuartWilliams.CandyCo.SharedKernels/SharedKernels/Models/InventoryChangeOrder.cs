@@ -1,4 +1,5 @@
-﻿using StuartWilliams.CandyCo.SharedKernels.Interfaces;
+﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
+using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 using System;
 using System.Collections.Generic;
 
@@ -7,7 +8,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
     /// <summary>
     /// Inventory Transfer Order
     /// </summary>
-    public class InventoryTransferOrder : IEntity, ICloneable
+    public class InventoryChangeOrder : IEntity, ICloneable
     {
         /// <summary>
         /// From Company
@@ -25,6 +26,11 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         public long RelatedTransactionId { get; set; }
 
         /// <summary>
+        /// Kind: Inventory Change Operation
+        /// </summary>
+        public InventoryChangeOperationKind ChangeOperationKind { get; set; }
+
+        /// <summary>
         /// Transfer Date
         /// </summary>
         public DateTime TransferDate { get; set; } = DateTime.UtcNow;
@@ -38,7 +44,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         {
             get
             {
-                if (_items == null) _items = new List<InventoryChangeItem>();
+                _items ??= new List<InventoryChangeItem>();
                 return _items;
             }
             set
@@ -88,7 +94,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Models
         public object Clone()
         {
             var json = Newtonsoft.Json.JsonConvert.SerializeObject(this);
-            var entity = Newtonsoft.Json.JsonConvert.DeserializeObject<InventoryTransferOrder>(json);
+            var entity = Newtonsoft.Json.JsonConvert.DeserializeObject<InventoryChangeOrder>(json);
             entity.Id = 0;
             entity.RelatedTransactionId = 0;
             return entity;

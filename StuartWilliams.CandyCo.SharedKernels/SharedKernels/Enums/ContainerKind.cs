@@ -7,7 +7,7 @@ namespace StuartWilliams.CandyCo.SharedKernels.Enums
     /// Container Type
     /// </summary>
     [Flags]
-    public enum ContainerType
+    public enum ContainerKind
     {
         /// <summary>
         /// Unknown
@@ -42,12 +42,12 @@ namespace StuartWilliams.CandyCo.SharedKernels.Enums
         /// <summary>
         /// Any
         /// </summary>
-        Any = ContainerType.Unknown | 
-              ContainerType.Each | 
-              ContainerType.Box | 
-              ContainerType.Pallet | 
-              ContainerType.Drum | 
-              ContainerType.Bag
+        Any = ContainerKind.Unknown | 
+              ContainerKind.Each | 
+              ContainerKind.Box | 
+              ContainerKind.Pallet | 
+              ContainerKind.Drum | 
+              ContainerKind.Bag
 
     }
 }

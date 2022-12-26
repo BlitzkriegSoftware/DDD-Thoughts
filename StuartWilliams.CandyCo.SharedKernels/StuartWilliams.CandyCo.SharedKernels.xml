@@ -39,42 +39,42 @@
             Any
             </summary>
         </member>
-        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType">
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind">
             <summary>
             Container Type
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Unknown">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind.Unknown">
             <summary>
             Unknown
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Each">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind.Each">
             <summary>
             Each
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Box">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind.Box">
             <summary>
             Box
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Pallet">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind.Pallet">
             <summary>
             Pallet
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Drum">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind.Drum">
             <summary>
             Drum
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Bag">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind.Bag">
             <summary>
             Bag
             </summary>
         </member>
-        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerType.Any">
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.ContainerKind.Any">
             <summary>
             Any
             </summary>
@@ -1008,63 +1008,68 @@
             Quantity
             </summary>
         </member>
-        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder">
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder">
             <summary>
             Inventory Transfer Order
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.FromCompany">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.FromCompany">
             <summary>
             From Company
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.ToCompany">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.ToCompany">
             <summary>
             To Company
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.RelatedTransactionId">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.RelatedTransactionId">
             <summary>
             Related Transaction Id
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.TransferDate">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.ChangeOperationKind">
+            <summary>
+            Kind: Inventory Change Operation
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.TransferDate">
             <summary>
             Transfer Date
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Items">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.Items">
             <summary>
             Inventory Items
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Id">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.Id">
             <summary>
             PK
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.ParentId">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.ParentId">
             <summary>
             ParentId
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Name">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.Name">
             <summary>
             Name (optional) as a note
             </summary>
         </member>
-        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.IsDeleted">
+        <member name="P:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.IsDeleted">
             <summary>
             Is Deleted
             </summary>
         </member>
-        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.IsValid">
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.IsValid">
             <summary>
             IsValid
             </summary>
             <returns>True if so</returns>
         </member>
-        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.InventoryTransferOrder.Clone">
+        <member name="M:StuartWilliams.CandyCo.SharedKernels.Models.InventoryChangeOrder.Clone">
             <summary>
             Clone (minus Id and Related Transaction Id)
             </summary>

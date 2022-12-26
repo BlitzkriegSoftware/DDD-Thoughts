@@ -21,9 +21,9 @@ namespace DDD_thoughts_test_example
         }
         #endregion
 
-        private static InventoryTransferOrder ModelMake()
+        private static InventoryChangeOrder ModelMake()
         {
-            return new InventoryTransferOrder()
+            return new InventoryChangeOrder()
             {
                 FromCompany = 1,
                 ToCompany = 4324,
@@ -55,14 +55,14 @@ namespace DDD_thoughts_test_example
         public void InventoryTransferOrder_Serialization()
         {
             var model = ModelMake();
-            TestJsonSerializationHelper.AssertJsonSerialization<InventoryTransferOrder>(_testContext, model);
+            TestJsonSerializationHelper.AssertJsonSerialization<InventoryChangeOrder>(_testContext, model);
         }
 
         [TestMethod]
         public void InventoryTransferOrder_Clone() {
             var model = ModelMake();
             Assert.IsTrue(model.IsValid());
-            InventoryTransferOrder clone = (InventoryTransferOrder) model.Clone();
+            InventoryChangeOrder clone = (InventoryChangeOrder) model.Clone();
             Assert.IsFalse(clone.IsValid());
         }
     }

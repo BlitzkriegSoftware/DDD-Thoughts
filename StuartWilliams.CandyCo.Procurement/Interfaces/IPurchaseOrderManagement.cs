@@ -1,6 +1,8 @@
 ﻿using StuartWilliams.CandyCo.Procurement.Models;
-using StuartWilliams.CandyCo.SharedKernels.Interfaces;
+using StuartWilliams.CandyCo.SharedKernels.Enums;
 using StuartWilliams.CandyCo.SharedKernels.Models;
+using StuartWilliams.CandyCo.SharedKernels.Interfaces;
+
 using System.Collections.Generic;
 
 namespace StuartWilliams.CandyCo.Procurement.Interfaces
@@ -17,6 +19,21 @@ namespace StuartWilliams.CandyCo.Procurement.Interfaces
         /// <param name="products">Find vendors that can supply these products</param>
         /// <returns></returns>
         IEnumerable<ProductSearchResult> FindVendorsForProducts(IEnumerable<ProductSearchArguments> products);
-    
+
+        /// <summary>
+        /// Update: Purchase Order (PO) Status
+        /// </summary>
+        /// <param name="purchaseOrderId">(sic)</param>
+        /// <param name="status">PurchaseOrderStatusKind</param>
+        /// <returns>True if so</returns>
+        bool UpdatePurchaseOrderStatus(long purchaseOrderId, OrderStatusKind status);
+
+        /// <summary>
+        /// Get: Purchase Order (PO) Status
+        /// </summary>
+        /// <param name="purchaseOrderId">(sic)</param>
+        /// <returns>PurchaseOrderStatusKind</returns>
+        OrderStatusKind PurchaseOrderStatus(long purchaseOrderId);
+
     }
 }

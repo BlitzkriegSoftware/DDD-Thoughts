@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace StuartWilliams.CandyCo.Procurement.Enums
+namespace StuartWilliams.CandyCo.SharedKernels.Enums
 {
     /// <summary>
-    /// Kind: Purchase Order Status
+    /// Kind: Order Status
     /// </summary>
     [Flags]
-    public enum PurchaseOrderStatusKind
+    public enum OrderStatusKind
     {
         /// <summary>
         /// Unknown
@@ -41,7 +41,7 @@ namespace StuartWilliams.CandyCo.Procurement.Enums
         /// <summary>
         /// Cancelled by us
         /// </summary>
-        Cancelled  = 32,
+        Cancelled = 32,
 
         /// <summary>
         /// Fullfilled

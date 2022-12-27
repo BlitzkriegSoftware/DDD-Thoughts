@@ -4,61 +4,6 @@
         <name>StuartWilliams.CandyCo.Procurement</name>
     </assembly>
     <members>
-        <member name="T:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind">
-            <summary>
-            Kind: Purchase Order Status
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Unknown">
-            <summary>
-            Unknown
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Draft">
-            <summary>
-            Draft
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Approved">
-            <summary>
-            Approved to send
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Sent">
-            <summary>
-            Sent to Vendor
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.VendorAccepted">
-            <summary>
-            Accepted by Vendor
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.VendorRejected">
-            <summary>
-            Rejected by Vendor
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Cancelled">
-            <summary>
-            Cancelled by us
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Fullfilled">
-            <summary>
-            Fullfilled
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Problem">
-            <summary>
-            Problem
-            </summary>
-        </member>
-        <member name="F:StuartWilliams.CandyCo.Procurement.Enums.PurchaseOrderStatusKind.Partial">
-            <summary>
-            Partially filled
-            </summary>
-        </member>
         <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderManagement">
             <summary>
             Interface: Purchase Order Management
@@ -70,6 +15,21 @@
             </summary>
             <param name="products">Find vendors that can supply these products</param>
             <returns></returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderManagement.UpdatePurchaseOrderStatus(System.Int64,StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind)">
+            <summary>
+            Update: Purchase Order (PO) Status
+            </summary>
+            <param name="purchaseOrderId">(sic)</param>
+            <param name="status">PurchaseOrderStatusKind</param>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderManagement.PurchaseOrderStatus(System.Int64)">
+            <summary>
+            Get: Purchase Order (PO) Status
+            </summary>
+            <param name="purchaseOrderId">(sic)</param>
+            <returns>PurchaseOrderStatusKind</returns>
         </member>
         <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearchArguments">
             <summary>

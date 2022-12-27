@@ -1,4 +1,4 @@
-﻿using StuartWilliams.CandyCo.Procurement.Enums;
+﻿using StuartWilliams.CandyCo.SharedKernels.Enums;
 using StuartWilliams.CandyCo.SharedKernels.Interfaces;
 
 namespace StuartWilliams.CandyCo.Procurement.Interfaces
@@ -11,6 +11,6 @@ namespace StuartWilliams.CandyCo.Procurement.Interfaces
         /// <summary>
         /// Kind: Purchase Order Status
         /// </summary>
-        public PurchaseOrderStatusKind PurchaseOrderStatus { get; set; }
+        public OrderStatusKind PurchaseOrderStatus { get; set; }
     }
 }

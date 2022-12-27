@@ -264,6 +264,61 @@
             Any shipping
             </summary>
         </member>
+        <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind">
+            <summary>
+            Kind: Order Status
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Draft">
+            <summary>
+            Draft
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Approved">
+            <summary>
+            Approved to send
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Sent">
+            <summary>
+            Sent to Vendor
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.VendorAccepted">
+            <summary>
+            Accepted by Vendor
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.VendorRejected">
+            <summary>
+            Rejected by Vendor
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Cancelled">
+            <summary>
+            Cancelled by us
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Fullfilled">
+            <summary>
+            Fullfilled
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Problem">
+            <summary>
+            Problem
+            </summary>
+        </member>
+        <member name="F:StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind.Partial">
+            <summary>
+            Partially filled
+            </summary>
+        </member>
         <member name="T:StuartWilliams.CandyCo.SharedKernels.Enums.PackagingUnitKind">
             <summary>
             Packaging Unit Kind

@@ -5,17 +5,23 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuartWilliams.CandyCo.Tests", "StuartWilliams.CandyCo.Tests\StuartWilliams.CandyCo.Tests.csproj", "{43BE8C52-6434-47CC-9D78-304C484F10BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuartWilliams.CandyCo.Sales", "StuartWilliams.CandyCo.Sales\StuartWilliams.CandyCo.Sales.csproj", "{E56AB39F-0BFA-41E3-96EC-EC1B1A9A4D2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuartWilliams.CandyCo.Sales", "StuartWilliams.CandyCo.Sales\StuartWilliams.CandyCo.Sales.csproj", "{E56AB39F-0BFA-41E3-96EC-EC1B1A9A4D2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuartWilliams.CandyCo.Inventory", "StuartWilliams.CandyCo.Inventory\StuartWilliams.CandyCo.Inventory.csproj", "{88B93731-5E17-434F-9754-8813BFA0D5A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuartWilliams.CandyCo.Inventory", "StuartWilliams.CandyCo.Inventory\StuartWilliams.CandyCo.Inventory.csproj", "{88B93731-5E17-434F-9754-8813BFA0D5A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuartWilliams.CandyCo.Freight", "StuartWilliams.CandyCo.Shipping\StuartWilliams.CandyCo.Freight.csproj", "{D90F95BD-1FDF-4070-8C75-54197CB6EBCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuartWilliams.CandyCo.Freight", "StuartWilliams.CandyCo.Shipping\StuartWilliams.CandyCo.Freight.csproj", "{D90F95BD-1FDF-4070-8C75-54197CB6EBCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuartWilliams.CandyCo.Directory", "StuartWilliams.CandyCo.Directory\StuartWilliams.CandyCo.Directory.csproj", "{BD09508B-CA54-4194-A768-5BE15D1D3B1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuartWilliams.CandyCo.Directory", "StuartWilliams.CandyCo.Directory\StuartWilliams.CandyCo.Directory.csproj", "{BD09508B-CA54-4194-A768-5BE15D1D3B1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StuartWilliams.CandyCo.Procurement", "StuartWilliams.CandyCo.Procurement\StuartWilliams.CandyCo.Procurement.csproj", "{1B73E798-896C-475D-94C2-A82704340FD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuartWilliams.CandyCo.Procurement", "StuartWilliams.CandyCo.Procurement\StuartWilliams.CandyCo.Procurement.csproj", "{1B73E798-896C-475D-94C2-A82704340FD3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StuartWilliams.CandyCo.SharedKernels", "StuartWilliams.CandyCo.SharedKernels\StuartWilliams.CandyCo.SharedKernels.csproj", "{FEADC0F5-45B2-4DE0-AB03-5A8647D6D35B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{D163AB79-97DB-4236-833E-99ABA127C349}"
+	ProjectSection(SolutionItems) = preProject
+		Scripts\make-doc.ps1 = Scripts\make-doc.ps1
+		Scripts\uml-server.ps1 = Scripts\uml-server.ps1
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

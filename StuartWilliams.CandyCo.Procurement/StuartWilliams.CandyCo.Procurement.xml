@@ -20,7 +20,7 @@
             <summary>
             Update: Purchase Order (PO) Status
             </summary>
-            <param name="purchaseOrderId">(sic)</param>
+            <param name="orderId">(sic)</param>
             <param name="status">PurchaseOrderStatusKind</param>
             <returns>True if so</returns>
         </member>
@@ -28,7 +28,7 @@
             <summary>
             Get: Purchase Order (PO) Status
             </summary>
-            <param name="purchaseOrderId">(sic)</param>
+            <param name="orderId">(sic)</param>
             <returns>PurchaseOrderStatusKind</returns>
         </member>
         <member name="T:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearchArguments">
@@ -39,6 +39,11 @@
         <member name="P:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearchArguments.PurchaseOrderStatus">
             <summary>
             Kind: Purchase Order Status
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Procurement.Interfaces.IPurchaseOrderSearchArguments.PurchaseOrderId">
+            <summary>
+            Purchange Order Id
             </summary>
         </member>
         <member name="T:StuartWilliams.CandyCo.Procurement.Models.ProductSearchArguments">

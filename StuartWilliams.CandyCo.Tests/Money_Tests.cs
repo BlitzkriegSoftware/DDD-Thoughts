@@ -42,8 +42,18 @@ namespace DDD_thoughts_test_example
             foreach(var ci in CurencyCodeList.Iso4217.Values)
             {
                 var m = new Money(123.4567m, ci);
+                Assert.IsTrue(m.IsValid());
                 _testContext?.WriteLine($"{ci} -> {m}");
             }
+        }
+
+        [TestMethod]
+        public void Money_Zero_Format()
+        {
+            var ci = "zz";
+            var m = new Money(123.4567m, ci);
+            Assert.IsFalse(m.IsValid());
+            _testContext?.WriteLine($"{ci} -> {m}");
         }
 
         [TestMethod]

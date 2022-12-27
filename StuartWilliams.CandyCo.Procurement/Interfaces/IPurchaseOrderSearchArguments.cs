@@ -12,5 +12,10 @@ namespace StuartWilliams.CandyCo.Procurement.Interfaces
         /// Kind: Purchase Order Status
         /// </summary>
         public OrderStatusKind PurchaseOrderStatus { get; set; }
+
+        /// <summary>
+        /// Purchange Order Id
+        /// </summary>
+        public long PurchaseOrderId { get; set; }
     }
 }

@@ -9,9 +9,34 @@
             Interface: Sales Order Management
             </summary>
         </member>
+        <member name="M:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderManagement.UpdateSalesOrderStatus(System.Int64,StuartWilliams.CandyCo.SharedKernels.Enums.OrderStatusKind)">
+            <summary>
+            Update: Purchase Order (PO) Status
+            </summary>
+            <param name="orderId">(sic)</param>
+            <param name="status">OrderStatusKind</param>
+            <returns>True if so</returns>
+        </member>
+        <member name="M:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderManagement.SalesOrderStatus(System.Int64)">
+            <summary>
+            Get: Purchase Order (PO) Status
+            </summary>
+            <param name="orderId">(sic)</param>
+            <returns>OrderStatusKind</returns>
+        </member>
         <member name="T:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderSearchArguments">
             <summary>
             Interface: Sales Order Search
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderSearchArguments.OrderStatus">
+            <summary>
+            Kind: Sales Order Status
+            </summary>
+        </member>
+        <member name="P:StuartWilliams.CandyCo.Sales.Interfaces.ISalesOrderSearchArguments.SalesOrderId">
+            <summary>
+            Sales Order Id
             </summary>
         </member>
     </members>

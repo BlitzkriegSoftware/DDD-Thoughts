@@ -23,17 +23,17 @@ namespace StuartWilliams.CandyCo.Procurement.Interfaces
         /// <summary>
         /// Update: Purchase Order (PO) Status
         /// </summary>
-        /// <param name="purchaseOrderId">(sic)</param>
+        /// <param name="orderId">(sic)</param>
         /// <param name="status">PurchaseOrderStatusKind</param>
         /// <returns>True if so</returns>
-        bool UpdatePurchaseOrderStatus(long purchaseOrderId, OrderStatusKind status);
+        bool UpdatePurchaseOrderStatus(long orderId, OrderStatusKind status);
 
         /// <summary>
         /// Get: Purchase Order (PO) Status
         /// </summary>
-        /// <param name="purchaseOrderId">(sic)</param>
+        /// <param name="orderId">(sic)</param>
         /// <returns>PurchaseOrderStatusKind</returns>
-        OrderStatusKind PurchaseOrderStatus(long purchaseOrderId);
+        OrderStatusKind PurchaseOrderStatus(long orderId);
 
     }
 }
